@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/MainCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaClienteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Servidor/MainServidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Servidor/Servidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Servidor/VentanaServidorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Clientes/VentanaCliente.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Servidor/VentanaServidor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyecto1connectdots/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyecto1connectdots/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/proyecto1connectdots/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hello-view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se crearon clases que permiten la conexion basica de sockets entre servidor y varios clientes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,11 +75,24 @@
       <workItem from="1694046328018" duration="1265000" />
       <workItem from="1694221127573" duration="1958000" />
       <workItem from="1694255617577" duration="1723000" />
-      <workItem from="1694416434484" duration="377000" />
+      <workItem from="1694416434484" duration="744000" />
     </task>
+    <task id="LOCAL-00001" summary="Se crearon clases que permiten la conexion basica de sockets entre servidor y varios clientes">
+      <option name="closed" value="true" />
+      <created>1694417169014</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694417169014</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se crearon clases que permiten la conexion basica de sockets entre servidor y varios clientes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se crearon clases que permiten la conexion basica de sockets entre servidor y varios clientes" />
   </component>
 </project>
