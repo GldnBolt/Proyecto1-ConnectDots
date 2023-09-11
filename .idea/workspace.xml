@@ -4,20 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="" />
+    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/MainCliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaClienteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Servidor/MainServidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Servidor/Servidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Servidor/VentanaServidorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Clientes/VentanaCliente.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Servidor/VentanaServidor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyecto1connectdots/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyecto1connectdots/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/proyecto1connectdots/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hello-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2V2tXD0vfqqEJpFl3sP06opl7VU" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,12 +52,34 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Xpc/Documents/GitHub/Proyecto1-ConnectDots",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Proyectosprogramacion/javaProjects/Proyecto1-ConnectDots/src/main/resources/com/Servidor",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Proyectosprogramacion\javaProjects\Proyecto1-ConnectDots\src\main\resources\com\Servidor" />
+      <recent name="C:\Proyectosprogramacion\javaProjects\Proyecto1-ConnectDots\src\main\resources\com\Clientes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Proyectosprogramacion\javaProjects\Proyecto1-ConnectDots\src\main\resources\com" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.Servidor" />
+      <recent name="com.Clientes" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -41,6 +89,10 @@
       <option name="presentableId" value="Default" />
       <updated>1694046040590</updated>
       <workItem from="1694046041635" duration="179000" />
+      <workItem from="1694046328018" duration="1265000" />
+      <workItem from="1694221127573" duration="1958000" />
+      <workItem from="1694255617577" duration="1723000" />
+      <workItem from="1694416434484" duration="377000" />
     </task>
     <servers />
   </component>

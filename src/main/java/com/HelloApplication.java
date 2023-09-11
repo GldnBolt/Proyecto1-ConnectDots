@@ -1,4 +1,4 @@
-package com.example.proyecto1connectdots;
+package com;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

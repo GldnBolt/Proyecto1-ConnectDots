@@ -1,8 +1,12 @@
-module com.example.proyecto1connectdots {
+module com.proyecto1connectdots {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens com.example.proyecto1connectdots to javafx.fxml;
-    exports com.example.proyecto1connectdots;
+    exports com;
+    opens com to javafx.fxml;
+    exports com.Clientes;
+    opens com.Clientes to javafx.fxml;
+    exports com.Servidor;
+    opens com.Servidor to javafx.fxml;
 }

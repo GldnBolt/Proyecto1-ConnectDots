@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="244.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Clientes.VentanaClienteController">
+    <Label layoutX="113.0" layoutY="24.0" text="Puerto de la partida">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="textPuerto" layoutX="88.0" layoutY="44.0">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </TextField>
+    <Button fx:id="botonUnirse" layoutX="145.0" layoutY="160.0" mnemonicParsing="false" onAction="#conectarseServidor"
+            text="Unirse">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Button>
+    <Label layoutX="128.0" layoutY="84.0" text="Ip de la partida">
+        <font>
+          <Font size="14.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="textIp" layoutX="88.0" layoutY="104.0" text="127.0.0.1">
+        <font>
+          <Font size="14.0"/>
+        </font>
+    </TextField>
+</AnchorPane>
