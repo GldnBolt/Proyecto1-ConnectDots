@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="198.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Servidor.VentanaServidorController">
+   <Label layoutX="114.0" layoutY="38.0" text="Puerto del servidor ">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Label>
+   <TextField fx:id="textPuerto" layoutX="88.0" layoutY="70.0">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </TextField>
+   <Button fx:id="botonEmpezar" layoutX="138.0" layoutY="127.0" mnemonicParsing="false" onAction="#iniciarConexion"
+           text="Empezar">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Button>
+</AnchorPane>

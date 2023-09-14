@@ -1,4 +1,4 @@
-package com.example.proyecto1connectdots;
+package com;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
