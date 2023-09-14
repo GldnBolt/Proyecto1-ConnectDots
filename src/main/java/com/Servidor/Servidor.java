@@ -1,18 +1,19 @@
 package com.Servidor;
 
+import com.EstructurasDatos.ListaEnlazada;
+import com.EstructurasDatos.Nodo;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.EOFException;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Servidor {
-    private List<Socket> clientes = new ArrayList<>();
-    private List<DataOutputStream> flujosSalida = new ArrayList<>();
-    private List<DataInputStream> flujosEntrada = new ArrayList<>();
+    private ListaEnlazada clientes = new ListaEnlazada();
+    private ListaEnlazada flujosSalida = new ListaEnlazada();
+    private ListaEnlazada flujosEntrada = new ListaEnlazada();
     private ServerSocket serverSocket;
 
     public void ejecutar(int puerto) {
@@ -23,23 +24,22 @@ public class Servidor {
                 while (true) {
                     Socket clienteSocket = serverSocket.accept();
                     System.out.println("Un jugador se ha conectado");
-                    clientes.add(clienteSocket);
 
+                    clientes.agregar(clienteSocket);
                     DataOutputStream salida = new DataOutputStream(clienteSocket.getOutputStream());
-                    flujosSalida.add(salida);
-
+                    flujosSalida.agregar(salida);
                     DataInputStream entrada = new DataInputStream(clienteSocket.getInputStream());
-                    flujosEntrada.add(entrada);
+                    flujosEntrada.agregar(entrada);
 
-                    // Crear un hilo para manejar la conexión del nuevo cliente
-                    Thread hiloCliente = new Thread(() -> {
+                    Thread hiloClientes = new Thread(() -> {
                         try {
+                            clientes.imprimir();
                             recibir(clienteSocket, entrada);
                         } finally {
                             cerrarConexion(clienteSocket, salida, entrada);
                         }
                     });
-                    hiloCliente.start();
+                    hiloClientes.start();
                 }
             } catch (IOException e) {
                 System.out.println("Error al iniciar el servidor");
@@ -50,9 +50,12 @@ public class Servidor {
 
     public void enviar(String mensaje) {
         try {
-            for (DataOutputStream salida : flujosSalida) {
+            Nodo nodoSalida = flujosSalida.getHead();
+            while (nodoSalida != null) {
+                DataOutputStream salida = (DataOutputStream) nodoSalida.data;
                 salida.writeUTF(mensaje);
                 salida.flush();
+                nodoSalida = nodoSalida.getNext();
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -75,9 +78,25 @@ public class Servidor {
     public void cerrarConexion(Socket clienteSocket, DataOutputStream salida, DataInputStream entrada) {
         try {
             clienteSocket.close();
-            clientes.remove(clienteSocket);
-            flujosSalida.remove(salida);
-            flujosEntrada.remove(entrada);
+            clientes.eliminar(clienteSocket);
+
+            Nodo nodoSalida = flujosSalida.getHead();
+            while (nodoSalida != null) {
+                if (nodoSalida.data == salida) {
+                    flujosSalida.eliminar(salida);
+                    break;
+                }
+                nodoSalida = nodoSalida.getNext();
+            }
+
+            Nodo nodoEntrada = flujosEntrada.getHead();
+            while (nodoEntrada != null) {
+                if (nodoEntrada.data == entrada) {
+                    flujosEntrada.eliminar(entrada);
+                    break;
+                }
+                nodoEntrada = nodoEntrada.getNext();
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

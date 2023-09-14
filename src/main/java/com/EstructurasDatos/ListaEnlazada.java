@@ -1,14 +1,14 @@
 package com.EstructurasDatos;
 
 /**
- * Esta clase es una representacion de una lista enlazada simple
+ * Esta clase es una representacion de una lista enlazada simple.
  */
 public class ListaEnlazada {
     private Nodo head;
     private int size;
 
     /**
-     * Constructor de la lista vacia
+     * Constructor de la lista vacia.
      */
     public ListaEnlazada() {
         this.head = null;
@@ -17,24 +17,24 @@ public class ListaEnlazada {
 
 
     /**
-     * Obtiene el tamaño actual de la lista
-     * @return el tamaño de la lista
+     * Obtiene el tamaño actual de la lista.
+     * @return el tamaño de la lista.
      */
     public int getSize() {
         return size;
     }
 
     /**
-     * Obtiene el primer elemento de la lista
-     * @return el primer elemento de la lista
+     * Obtiene el primer elemento de la lista.
+     * @return el primer elemento de la lista.
      */
     public Nodo getHead() {
         return head;
     }
 
     /**
-     *  Agrega un elemento al final de la lista
-     * @param valor elemento a agregar
+     *  Agrega un elemento al final de la lista.
+     * @param valor elemento a agregar.
      */
     public void agregar(Object valor) {
         Nodo nuevoNodo = new Nodo(valor);
@@ -51,8 +51,8 @@ public class ListaEnlazada {
     }
 
     /**
-     * Recorre la lista y elimina el elemento dado
-     * @param valor elemento a eliminar
+     * Recorre la lista y elimina el elemento dado.
+     * @param valor elemento a eliminar.
      */
     public void eliminar(Object valor) {
         if (head == null) {
