@@ -16,5 +16,6 @@ public class VentanaClienteController {
         if (!textPuerto.getText().isEmpty() && !textIp.getText().isEmpty()) {
             MainCliente.cliente.ejecutar(Integer.parseInt(textPuerto.getText()), textIp.getText());
         }
+
     }
 }
