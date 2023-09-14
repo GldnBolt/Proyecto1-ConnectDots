@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Servidor {
-    // es necesario cambiar las listas por las creadas por nosotros mismos
     private List<Socket> clientes = new ArrayList<>();
     private List<DataOutputStream> flujosSalida = new ArrayList<>();
     private List<DataInputStream> flujosEntrada = new ArrayList<>();
