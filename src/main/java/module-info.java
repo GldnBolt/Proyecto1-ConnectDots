@@ -1,6 +1,7 @@
 module com.proyecto1connectdots {
     requires javafx.controls;
     requires javafx.fxml;
+    requires RXTXcomm;
 
 
     exports com;
