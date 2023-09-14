@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se completaron las clases de lista enlazada y nodo">
+    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Clientes/VentanaJuego.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/EstructurasDatos/ListaEnlazada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasDatos/ListaEnlazada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Servidor/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Servidor/Servidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaClienteController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,27 +17,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Elmanuff&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="8fa4d11d-05b8-4e4f-a60e-22beb60246eb" />
-        <option name="url" value="https://github.com/GldnBolt/Proyecto1-ConnectDots.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -50,25 +36,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/famil/OneDrive/Escritorio/Prueba&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.27586207&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Program Files/Java/jre1.8.0_321/lib/ext/RXTXcomm.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.27586207",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -78,13 +64,6 @@
       <option name="presentableId" value="Default" />
       <updated>1694046040590</updated>
       <workItem from="1694046041635" duration="179000" />
-      <workItem from="1694672157102" duration="197000" />
-      <workItem from="1694672433882" duration="1165000" />
-      <workItem from="1694673829003" duration="303000" />
-      <workItem from="1694674142518" duration="153000" />
-      <workItem from="1694674304646" duration="1313000" />
-      <workItem from="1694684091919" duration="2620000" />
-      <workItem from="1694687704302" duration="934000" />
     </task>
     <task id="LOCAL-00001" summary="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
       <option name="closed" value="true" />
@@ -102,31 +81,7 @@
       <option name="project" value="LOCAL" />
       <updated>1694660234307</updated>
     </task>
-    <task id="LOCAL-00003" summary="Se crearon clase y ventana para empezar e juego">
-      <option name="closed" value="true" />
-      <created>1694666275985</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1694666275985</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Se creo el paquete de estructuras de datos y la clase nodo">
-      <option name="closed" value="true" />
-      <created>1694666549806</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1694666549806</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Se completaron las clases de lista enlazada y nodo">
-      <option name="closed" value="true" />
-      <created>1694687210556</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1694687210556</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,10 +100,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se genero el codigo de la clase que controla las senales recibidas desde arduino" />
-    <MESSAGE value="Se crearon clase y ventana para empezar e juego" />
-    <MESSAGE value="Se creo el paquete de estructuras de datos y la clase nodo" />
-    <MESSAGE value="Se completaron las clases de lista enlazada y nodo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se completaron las clases de lista enlazada y nodo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se genero el codigo de la clase que controla las senales recibidas desde arduino" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
