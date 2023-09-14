@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/Clientes/ventanajuego2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaJuegoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaJuegoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Clientes/VentanaJuego.fxml" beforeDir="false" />
-    </list>
+    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +77,21 @@
       <option name="project" value="LOCAL" />
       <updated>1694660234307</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz">
+      <created>1694677347893</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694677347893</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz">
+      <created>1694677607873</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694677607873</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,7 +99,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se genero el codigo de la clase que controla las senales recibidas desde arduino" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se genero el codigo de la clase que controla las senales recibidas desde arduino" />
+    <MESSAGE value="Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
