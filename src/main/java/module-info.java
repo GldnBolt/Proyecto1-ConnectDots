@@ -3,7 +3,6 @@ module com.proyecto1connectdots {
     requires javafx.fxml;
     requires RXTXcomm;
 
-
     exports com;
     opens com to javafx.fxml;
     exports com.Clientes;

@@ -1,5 +1,3 @@
-package com.Clientes;
+//package com.Clientes;
 
-public class VentanaJuegoController {
-
-}
+//public class VentanaJuegoController {}
