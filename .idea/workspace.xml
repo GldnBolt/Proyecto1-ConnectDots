@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz">
+    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="intento abrir ventana de interfaz">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaJuegoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Clientes/ArduinoSerial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/ArduinoSerial.java" afterDir="false" />
@@ -117,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694677607873</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="intento abrir ventana de interfaz">
+      <created>1695013597912</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695013597912</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,7 +133,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se genero el codigo de la clase que controla las senales recibidas desde arduino" />
     <MESSAGE value="Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz" />
+    <MESSAGE value="intento abrir ventana de interfaz" />
+    <option name="LAST_COMMIT_MESSAGE" value="intento abrir ventana de interfaz" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
