@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasDatos/Cola.java" afterDir="false" />
+    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaJuegoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Clientes/ArduinoSerial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/ArduinoSerial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Clientes/MainCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/MainCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaClienteController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +45,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Java/jre1.8.0_321/lib/ext/RXTXcomm.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Java/jre-1.8/lib/RXTXcomm.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -50,10 +53,30 @@
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.27586207&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="VentanaJuegoController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Clientes.VentanaJuegoController" />
+      <module name="Proyecto1-ConnectDots" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Clientes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.VentanaJuegoController" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -80,26 +103,30 @@
       <option name="project" value="LOCAL" />
       <updated>1694660234307</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz">
+      <created>1694677347893</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694677347893</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz">
+      <created>1694677607873</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694677607873</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se genero el codigo de la clase que controla las senales recibidas desde arduino" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se genero el codigo de la clase que controla las senales recibidas desde arduino" />
+    <MESSAGE value="Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

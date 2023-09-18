@@ -28,7 +28,12 @@ public class MainCliente extends Application {
         stage.resizableProperty().setValue(false);
         stage.show();
     }
-
+    public static void ventanajuego() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(VentanaJuegoController.class.getResource("ventanajuego2.fxml"));
+        Scene scene2 = new Scene(fxmlLoader.load());
+        Stage Venjuego= new Stage();
+        Venjuego.show();
+    }
     /**
      * Esta funcion nada más carga
      * @param args son argumentos internos necesarios para el correcto funcionamiento.
