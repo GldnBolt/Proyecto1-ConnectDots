@@ -15,7 +15,6 @@ public class ListaEnlazada {
         this.size = 0;
     }
 
-
     /**
      * Obtiene el tamaño actual de la lista.
      * @return el tamaño de la lista.
@@ -30,6 +29,10 @@ public class ListaEnlazada {
      */
     public Nodo getHead() {
         return head;
+    }
+
+    public void setHead(Nodo head) {
+        this.head = head;
     }
 
     /**

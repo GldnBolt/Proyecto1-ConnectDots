@@ -32,6 +32,7 @@ public class MainCliente extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(VentanaJuegoController.class.getResource("ventanajuego2.fxml"));
         Scene scene2 = new Scene(fxmlLoader.load());
         Stage Venjuego= new Stage();
+        Venjuego.setScene(scene2);
         Venjuego.show();
     }
     /**

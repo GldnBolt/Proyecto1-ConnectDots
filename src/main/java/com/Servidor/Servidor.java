@@ -1,5 +1,6 @@
 package com.Servidor;
 
+import com.EstructurasDatos.Cola;
 import com.EstructurasDatos.ListaEnlazada;
 import com.EstructurasDatos.Nodo;
 
@@ -12,6 +13,7 @@ import java.net.Socket;
 
 public class Servidor {
     private ListaEnlazada clientes = new ListaEnlazada();
+    private Cola colaClientes = new Cola();
     private ListaEnlazada flujosSalida = new ListaEnlazada();
     private ListaEnlazada flujosEntrada = new ListaEnlazada();
     private ServerSocket serverSocket;
@@ -26,6 +28,7 @@ public class Servidor {
                     System.out.println("Un jugador se ha conectado");
 
                     clientes.agregar(clienteSocket);
+                    colaClientes.enqueue(clienteSocket);
                     DataOutputStream salida = new DataOutputStream(clienteSocket.getOutputStream());
                     flujosSalida.agregar(salida);
                     DataInputStream entrada = new DataInputStream(clienteSocket.getInputStream());
@@ -40,6 +43,10 @@ public class Servidor {
                         }
                     });
                     hiloClientes.start();
+
+                    if (colaClientes.tamano() >= 2){
+                        System.out.println("empezar");
+                    }
                 }
             } catch (IOException e) {
                 System.out.println("Error al iniciar el servidor");
