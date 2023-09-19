@@ -1,0 +1,133 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"66cb057c-efd5-495c-8dc9-683bc49ec083\" name=\"Changes\" comment=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2V2tXD0vfqqEJpFl3sP06opl7VU\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Program Files/Java/jre-1.8/lib/RXTXcomm.jar\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Libraries\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.27586207\",\r\n    \"settings.editor.selected.configurable\": \"reference.settings.project.maven.repository.indices\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"66cb057c-efd5-495c-8dc9-683bc49ec083\" name=\"Changes\" comment=\"\" />\r\n      <created>1694046040590</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1694046040590</updated>\r\n      <workItem from=\"1694046041635\" duration=\"179000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694660231007</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694660231007</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694660234307</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694660234307</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision a8a4a4276feff11d7a7eff627a2d52a9bedad6bf)
++++ b/.idea/workspace.xml	(date 1694666254835)
+@@ -4,7 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
++    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se crearon clases que permiten la conexion basica de sockets entre servidor y varios clientes">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -26,30 +26,45 @@
+   &quot;associatedIndex&quot;: 3
+ }</component>
+   <component name="ProjectId" id="2V2tXD0vfqqEJpFl3sP06opl7VU" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
++    <ConfirmationsSetting value="2" id="Add" />
++  </component>
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "git-widget-placeholder": "master",
+-    "ignore.virus.scanning.warn.message": "true",
+-    "last_opened_file_path": "C:/Program Files/Java/jre-1.8/lib/RXTXcomm.jar",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "project.structure.last.edited": "Libraries",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.27586207",
+-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+-    "vue.rearranger.settings.migration": "true"
+-  }
+-}]]></component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
++    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Proyectosprogramacion/javaProjects/Proyecto1-ConnectDots/src/main/resources/com/Servidor&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  }
++}</component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Proyectosprogramacion\javaProjects\Proyecto1-ConnectDots\src\main\resources\com\Servidor" />
++      <recent name="C:\Proyectosprogramacion\javaProjects\Proyecto1-ConnectDots\src\main\resources\com\Clientes" />
++    </key>
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Proyectosprogramacion\javaProjects\Proyecto1-ConnectDots\src\main\resources\com" />
++    </key>
++    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
++      <recent name="com" />
++    </key>
++    <key name="CopyClassDialog.RECENTS_KEY">
++      <recent name="com.Servidor" />
++      <recent name="com.Clientes" />
++    </key>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -59,35 +74,28 @@
+       <option name="presentableId" value="Default" />
+       <updated>1694046040590</updated>
+       <workItem from="1694046041635" duration="179000" />
++      <workItem from="1694046328018" duration="1265000" />
++      <workItem from="1694221127573" duration="1958000" />
++      <workItem from="1694255617577" duration="1723000" />
++      <workItem from="1694416434484" duration="744000" />
++      <workItem from="1694664867605" duration="665000" />
+     </task>
+-    <task id="LOCAL-00001" summary="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
++    <task id="LOCAL-00001" summary="Se crearon clases que permiten la conexion basica de sockets entre servidor y varios clientes">
+       <option name="closed" value="true" />
+-      <created>1694660231007</created>
++      <created>1694417169014</created>
+       <option name="number" value="00001" />
+       <option name="presentableId" value="LOCAL-00001" />
+       <option name="project" value="LOCAL" />
+-      <updated>1694660231007</updated>
++      <updated>1694417169014</updated>
+     </task>
+-    <task id="LOCAL-00002" summary="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
+-      <option name="closed" value="true" />
+-      <created>1694660234307</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1694660234307</updated>
+-    </task>
+-    <option name="localTasksCounter" value="3" />
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
+   <component name="VcsManagerConfiguration">
+-    <MESSAGE value="Se genero el codigo de la clase que controla las senales recibidas desde arduino" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Se genero el codigo de la clase que controla las senales recibidas desde arduino" />
+-  </component>
+-  <component name="XSLT-Support.FileAssociations.UIState">
+-    <expand />
+-    <select />
++    <MESSAGE value="Se crearon clases que permiten la conexion basica de sockets entre servidor y varios clientes" />
++    <option name="LAST_COMMIT_MESSAGE" value="Se crearon clases que permiten la conexion basica de sockets entre servidor y varios clientes" />
+   </component>
+ </project>
+\ No newline at end of file
