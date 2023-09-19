@@ -1,7 +1,7 @@
 package com.Clientes;
 
-//import gnu.io.CommPortIdentifier;
-//import gnu.io.SerialPort;
+import gnu.io.CommPortIdentifier;
+import gnu.io.SerialPort;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -16,11 +16,11 @@ public class ArduinoSerial {
 
     public static void main(String[] args) {
         try {
-       //     CommPortIdentifier portId = null;
-         //   Enumeration portEnum = CommPortIdentifier.getPortIdentifiers();
+            CommPortIdentifier portId = null;
+            Enumeration portEnum = CommPortIdentifier.getPortIdentifiers();
 
-           // while (portEnum.hasMoreElements()) {
-            //    CommPortIdentifier currPortId = (CommPortIdentifier) portEnum.nextElement();
+            while (portEnum.hasMoreElements()) {
+                CommPortIdentifier currPortId = (CommPortIdentifier) portEnum.nextElement();
                 if (currPortId.getName().equals(PORT_NAME)) {
                     portId = currPortId;
                     break;
