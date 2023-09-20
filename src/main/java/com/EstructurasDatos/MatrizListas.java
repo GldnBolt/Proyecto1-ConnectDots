@@ -75,7 +75,6 @@ public class MatrizListas {
     public static void main(String[] args) {
         MatrizListas matriz = new MatrizListas();
 
-        // Agregar elementos a la matriz
         matriz.agregarElemento(1, 1, 1);
         matriz.agregarElemento(1, 2, 2);
         matriz.agregarElemento(1,3, 3);

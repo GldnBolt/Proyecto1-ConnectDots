@@ -45,7 +45,7 @@ public class Servidor {
                     hiloClientes.start();
 
                     if (colaClientes.tamano() >= 2){
-                        System.out.println("empezar");
+                        System.out.println("empezar"); //poner funcion empezar
                     }
                 }
             } catch (IOException e) {
