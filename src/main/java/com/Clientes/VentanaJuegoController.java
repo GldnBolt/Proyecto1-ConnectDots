@@ -3,6 +3,7 @@ package com.Clientes;
 import javafx.application.Application;
 import java.io.IOException;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,11 +12,8 @@ import javafx.stage.Stage;
 
 public class VentanaJuegoController{
     @FXML
-    private Button Boton11;
-
-    public void seleccionado() {
-        //boton.getid
-        Boton11.setStyle("-fx-background-color: green");
+    private void handleButtonAction(ActionEvent event) {
+        Button clickedButton = (Button) event.getSource();
+        clickedButton.setStyle("-fx-background-color: #8608a5");
     }
-
 }

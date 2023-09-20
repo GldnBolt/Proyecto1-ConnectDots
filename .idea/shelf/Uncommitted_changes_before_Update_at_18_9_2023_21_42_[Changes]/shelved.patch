@@ -1,0 +1,103 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"66cb057c-efd5-495c-8dc9-683bc49ec083\" name=\"Changes\" comment=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/EstructurasDatos/Cola.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2V2tXD0vfqqEJpFl3sP06opl7VU\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Java/jre1.8.0_321/lib/ext/RXTXcomm.jar&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.27586207&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"66cb057c-efd5-495c-8dc9-683bc49ec083\" name=\"Changes\" comment=\"\" />\r\n      <created>1694046040590</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1694046040590</updated>\r\n      <workItem from=\"1694046041635\" duration=\"179000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694660231007</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694660231007</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694660234307</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694660234307</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 3b91c4c27f046c3bad2cc6f7e894fb9f72b43a53)
++++ b/.idea/workspace.xml	(date 1695054181801)
+@@ -5,8 +5,8 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasDatos/Cola.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -16,7 +16,6 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
+-        <option value="FxmlFile" />
+         <option value="Class" />
+       </list>
+     </option>
+@@ -28,9 +27,7 @@
+   &quot;associatedIndex&quot;: 3
+ }</component>
+   <component name="ProjectId" id="2V2tXD0vfqqEJpFl3sP06opl7VU" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+-    <ConfirmationsSetting value="2" id="Add" />
+-  </component>
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+@@ -42,7 +39,7 @@
+     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Java/jre1.8.0_321/lib/ext/RXTXcomm.jar&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Java/jre-1.8/lib/RXTXcomm.jar&quot;,
+     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+@@ -50,7 +47,7 @@
+     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+     &quot;project.structure.side.proportion&quot;: &quot;0.27586207&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+ }</component>
+@@ -63,6 +60,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1694046040590</updated>
+       <workItem from="1694046041635" duration="179000" />
++      <workItem from="1695054153038" duration="29000" />
+     </task>
+     <task id="LOCAL-00001" summary="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
+       <option name="closed" value="true" />
+@@ -85,17 +83,6 @@
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+-  </component>
+-  <component name="Vcs.Log.Tabs.Properties">
+-    <option name="TAB_STATES">
+-      <map>
+-        <entry key="MAIN">
+-          <value>
+-            <State />
+-          </value>
+-        </entry>
+-      </map>
+-    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Se genero el codigo de la clase que controla las senales recibidas desde arduino" />
+Index: src/main/java/module-info.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>module com.proyecto1connectdots {\r\n    requires javafx.controls;\r\n    requires javafx.fxml;\r\n   // requires RXTXcomm;\r\n\r\n    exports com;\r\n    opens com to javafx.fxml;\r\n    exports com.Clientes;\r\n    opens com.Clientes to javafx.fxml;\r\n    exports com.Servidor;\r\n    opens com.Servidor to javafx.fxml;\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/module-info.java b/src/main/java/module-info.java
+--- a/src/main/java/module-info.java	(revision 3b91c4c27f046c3bad2cc6f7e894fb9f72b43a53)
++++ b/src/main/java/module-info.java	(date 1694740859355)
+@@ -1,7 +1,8 @@
+ module com.proyecto1connectdots {
+     requires javafx.controls;
+     requires javafx.fxml;
+-   // requires RXTXcomm;
++    requires RXTXcomm;
++    // requires RXTXcomm;
+ 
+     exports com;
+     opens com to javafx.fxml;
