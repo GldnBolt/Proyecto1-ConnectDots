@@ -12,7 +12,7 @@ public class ArduinoSerial {
     private static OutputStream output;
     private static final int TIMEOUT = 2000;
     private static final int BAUD_RATE = 9600;
-    private static final String PORT_NAME = "COM3"; // Change this to match your port name
+    private static final String PORT_NAME = "COM3";
 
     public static void main(String[] args) {
         try {
