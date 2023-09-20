@@ -13,10 +13,9 @@ public class VentanaJuegoController{
     @FXML
     private Button Boton11;
 
-    public void seleccionado(){
+    public void seleccionado() {
         //boton.getid
         Boton11.setStyle("-fx-background-color: green");
     }
-
 
 }
