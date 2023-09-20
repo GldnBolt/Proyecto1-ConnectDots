@@ -6,103 +6,45 @@
 
 <AnchorPane fx:id="linea1011" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Clientes.VentanaJuegoController">
    <children>
-      <Line fx:id="linea1216" endX="15.0" layoutX="478.0" layoutY="347.0" startX="15.0" startY="-111.0" strokeWidth="7.0" />
-      <Line fx:id="linea1115" endX="19.0" layoutX="348.0" layoutY="342.0" startX="19.0" startY="-102.0" strokeWidth="7.0" />
-      <Line fx:id="linea1014" endX="14.0" layoutX="230.0" layoutY="347.0" startX="14.0" startY="-111.0" strokeWidth="7.0" />
-      <Line fx:id="linea913" endX="9.0" endY="4.0" layoutX="109.0" layoutY="340.0" startX="9.0" startY="-101.0" strokeWidth="7.0" />
-      <Line fx:id="linea1516" endX="23.0" layoutX="467.0" layoutY="345.0" startX="-100.0" strokeWidth="7.0" />
-      <Line fx:id="linea1415" endX="29.0" layoutX="335.0" layoutY="345.0" startX="-100.0" strokeWidth="7.0" />
-      <Line fx:id="linea1314" endX="9.0" layoutX="232.0" layoutY="345.0" startX="-115.0" strokeWidth="7.0" />
-      <Line fx:id="linea812" endX="27.0" endY="3.0" layoutX="466.0" layoutY="249.0" startX="27.0" startY="-101.0" strokeWidth="7.0" />
-      <Line fx:id="linea1112" endX="15.0" layoutX="474.0" layoutY="253.0" startX="-100.0" strokeWidth="7.0" />
-      <Line fx:id="linea711" endX="12.0" layoutX="355.0" layoutY="256.0" startX="12.0" startY="-96.0" strokeWidth="7.0" />
-      <Line fx:id="linea1011" endX="22.0" layoutX="351.0" layoutY="253.0" startX="-100.0" strokeWidth="7.0" />
-      <Line fx:id="linea610" endX="-2.0" endY="11.0" layoutX="247.0" layoutY="243.0" startX="-2.0" startY="-81.0" strokeWidth="7.0" />
-      <Line fx:id="linea910" endX="24.0" layoutX="217.0" layoutY="253.0" startX="-100.0" strokeWidth="7.0" />
-      <Line fx:id="linea59" endX="-100.0" endY="90.0" layoutX="218.0" layoutY="163.0" startX="-100.0" strokeWidth="7.0" />
-      <Line fx:id="linea48" endX="-76.0" endY="91.0" layoutX="569.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
-      <Line fx:id="linea36" endX="-76.0" endY="91.0" layoutX="443.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
-      <Line fx:id="linea26" endX="-76.0" endY="91.0" layoutX="321.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
-      <Line fx:id="Linea15" endX="-76.0" endY="91.0" layoutX="194.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
-      <Line fx:id="linea78" endX="39.0" layoutX="449.0" layoutY="159.0" startX="-76.0" strokeWidth="7.0" />
-      <Line fx:id="linea56" endX="50.0" layoutX="198.0" layoutY="159.0" startX="-76.0" strokeWidth="7.0" />
-      <Line fx:id="linea67" endX="50.0" layoutX="331.0" layoutY="159.0" startX="-76.0" strokeWidth="7.0" />
-      <Line fx:id="linea34" endX="38.5" endY="0.5" layoutX="450.0" layoutY="67.0" startX="-76.0" strokeWidth="7.0" />
-      <Line fx:id="Linea23" endX="50.0" layoutX="325.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
-      <Line fx:id="Linea12" endX="50.0" layoutX="192.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
-    <Button fx:id="Button1" ellipsisString="" layoutX="82.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="56.0" text="boton1">
-         <graphic>
-            <Circle id="1.1" fx:id="circulo1" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic>
-      </Button>
-    <Button fx:id="Button2" ellipsisString="" layoutX="208.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="40.0" text="Boton1.2">
-         <graphic>
-            <Circle id="1.2" fx:id="circulo12" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic>
-      </Button>
-    <Button fx:id="Button4" ellipsisString="" layoutX="455.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="49.0" text="boton1.4">
-         <graphic>
-            <Circle id="1.4" fx:id="circulo14" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic></Button>
-      <Button fx:id="Button5" ellipsisString="" layoutX="82.0" layoutY="127.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="48.0" text="boton2.1">
-         <graphic>
-            <Circle id="2.1" fx:id="circulo21" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic>
-      </Button>
-      <Button fx:id="Button6" ellipsisString="" layoutX="208.0" layoutY="127.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="75.0" text="boton2.2">
-         <graphic>
-            <Circle id="2.2" fx:id="circulo22" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic></Button>
-      <Button fx:id="Button7" ellipsisString="" layoutX="330.0" layoutY="127.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="67.0" text="boton2.3">
-         <graphic>
-            <Circle id="2.3" fx:id="circulo23" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic></Button>
-      <Button fx:id="Button8" ellipsisString="" layoutX="455.0" layoutY="127.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="52.0" text="boton2.4">
-         <graphic>
-            <Circle id="2.4" fx:id="circulo24" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic></Button>
-      <Button fx:id="Button9" ellipsisString="" layoutX="80.0" layoutY="221.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="65.0" text="Boton3.1">
-         <graphic>
-            <Circle id="3.1" fx:id="circulo31" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic></Button>
-      <Button fx:id="Button10" ellipsisString="" layoutX="208.0" layoutY="221.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="76.0" text="Boton3.2">
-         <graphic>
-            <Circle id="3.2" fx:id="circulo32" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic></Button>
-    <Button fx:id="Button3" layoutX="330.0" layoutY="33.0" minWidth="69.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="75.0" text="Boton1.3">
-         <graphic>
-            <Circle id="1.3" fx:id="circulo13" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic>
-      </Button>
-      <Button fx:id="Button11" ellipsisString="" layoutX="330.0" layoutY="221.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="69.0" text="boton3.3">
-         <graphic>
-            <Circle id="3.3" fx:id="circulo33" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic>
-      </Button>
-      <Button fx:id="Button12" ellipsisString="" layoutX="455.0" layoutY="221.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="63.0" text="boton3.4">
-         <graphic>
-            <Circle id="3.4" fx:id="circulo34" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic>
-      </Button>
-      <Button fx:id="Button13" ellipsisString="" layoutX="80.0" layoutY="313.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="67.0" text="boton4.1">
-         <graphic>
-            <Circle id="4.1" fx:id="circulo41" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic>
-      </Button>
-      <Button fx:id="Button14" ellipsisString="" layoutX="208.0" layoutY="313.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="75.0" text="boton4.2">
-         <graphic>
-            <Circle id="4.2" fx:id="circulo42" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic>
-      </Button>
-      <Button fx:id="Button15" ellipsisString="" layoutX="330.0" layoutY="313.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="75.0" text="boton4.3">
-         <graphic>
-            <Circle id="4.3" fx:id="circulo43" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic>
-      </Button>
-      <Button fx:id="Button16" ellipsisString="" layoutX="455.0" layoutY="313.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="47.0" text="boton4.4">
-         <graphic>
-            <Circle id="4.4" fx:id="circulo44" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-         </graphic>
-      </Button>
+      <Line fx:id="linea1216" endX="15.0" layoutX="478.0" layoutY="347.0" startX="15.0" startY="-111.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea1115" endX="19.0" layoutX="348.0" layoutY="342.0" startX="19.0" startY="-102.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea1014" endX="14.0" layoutX="230.0" layoutY="347.0" startX="14.0" startY="-111.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea913" endX="9.0" endY="4.0" layoutX="109.0" layoutY="340.0" startX="9.0" startY="-101.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea1516" endX="23.0" layoutX="467.0" layoutY="345.0" startX="-100.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea1415" endX="29.0" layoutX="335.0" layoutY="345.0" startX="-100.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea1314" endX="9.0" layoutX="232.0" layoutY="345.0" startX="-115.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea812" endX="27.0" endY="3.0" layoutX="466.0" layoutY="249.0" startX="27.0" startY="-101.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea1112" endX="15.0" layoutX="474.0" layoutY="253.0" startX="-100.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea711" endX="12.0" layoutX="355.0" layoutY="256.0" startX="12.0" startY="-96.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea1011" endX="22.0" layoutX="351.0" layoutY="253.0" startX="-100.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea610" endX="-2.0" endY="11.0" layoutX="247.0" layoutY="243.0" startX="-2.0" startY="-81.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea910" endX="24.0" layoutX="217.0" layoutY="253.0" startX="-100.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea59" endX="-100.0" endY="90.0" layoutX="218.0" layoutY="163.0" startX="-100.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea48" endX="-76.0" endY="91.0" layoutX="569.0" layoutY="68.0" startX="-76.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea36" endX="-76.0" endY="91.0" layoutX="443.0" layoutY="68.0" startX="-76.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea26" endX="-76.0" endY="91.0" layoutX="321.0" layoutY="68.0" startX="-76.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="Linea15" endX="-76.0" endY="91.0" layoutX="194.0" layoutY="68.0" startX="-76.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea78" endX="39.0" layoutX="449.0" layoutY="159.0" startX="-76.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea56" endX="50.0" layoutX="198.0" layoutY="159.0" startX="-76.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea67" endX="50.0" layoutX="331.0" layoutY="159.0" startX="-76.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="linea34" endX="38.5" endY="0.5" layoutX="450.0" layoutY="67.0" startX="-76.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="Linea23" endX="50.0" layoutX="325.0" layoutY="68.0" startX="-76.0" stroke="#8d8585" strokeWidth="7.0" />
+      <Line fx:id="Linea12" endX="50.0" layoutX="192.0" layoutY="68.0" startX="-76.0" stroke="#8d8585" strokeWidth="7.0" />
+    <Button fx:id="Button1" ellipsisString="" layoutX="93.0" layoutY="43.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button"/>
+    <Button fx:id="Button2" ellipsisString="" layoutX="219.0" layoutY="43.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button"/>
+       <Button fx:id="Button3" ellipsisString="" layoutX="343.0" layoutY="43.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button"/>
+    <Button fx:id="Button4" ellipsisString="" layoutX="469.0" layoutY="43.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button"/>
+       <Button fx:id="Button5" ellipsisString="" layoutX="93.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button" />
+      <Button fx:id="Button6" ellipsisString="" layoutX="219.0" layoutY="134.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button" />
+      <Button fx:id="Button7" ellipsisString="" layoutX="342.0" layoutY="134.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button" />
+      <Button fx:id="Button8" ellipsisString="" layoutX="468.0" layoutY="134.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button" />
+      <Button fx:id="Button9" ellipsisString="" layoutX="93.0" layoutY="228.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button" />
+      <Button fx:id="Button10" ellipsisString="" layoutX="220.0" layoutY="228.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button" />
+      <Button fx:id="Button11" ellipsisString="" layoutX="342.0" layoutY="228.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button" />
+      <Button fx:id="Button12" ellipsisString="" layoutX="468.0" layoutY="228.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button" />
+      <Button fx:id="Button13" ellipsisString="" layoutX="93.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button" />
+      <Button fx:id="Button14" ellipsisString="" layoutX="219.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button" />
+      <Button fx:id="Button15" ellipsisString="" layoutX="342.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button" />
+      <Button fx:id="Button16" ellipsisString="" layoutX="468.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="50.0" style="circularButton: .circularButton {    -fx-background-color: #0072C6;    -fx-background-radius: 50%;    -fx-min-width: 50px;    -fx-min-height: 50px;    -fx-max-width: 50px;    -fx-max-height: 50px;};" styleClass="circular-Button" />
    </children>
 </AnchorPane>
