@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Clientes.VentanaJuegoController">
+<AnchorPane fx:id="linea1011" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Clientes.VentanaJuegoController">
    <children>
     <Button fx:id="Button1" ellipsisString="" layoutX="82.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="56.0" text="boton1">
          <graphic>
@@ -82,13 +82,27 @@
       </Button>
       <Line fx:id="Linea12" endX="50.0" layoutX="192.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
       <Line fx:id="Linea23" endX="50.0" layoutX="325.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
-      <Line endX="50.0" layoutX="458.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
-      <Line endX="50.0" layoutX="331.0" layoutY="159.0" startX="-76.0" strokeWidth="7.0" />
-      <Line endX="50.0" layoutX="198.0" layoutY="159.0" startX="-76.0" strokeWidth="7.0" />
-      <Line endX="50.0" layoutX="458.0" layoutY="159.0" startX="-76.0" strokeWidth="7.0" />
+      <Line fx:id="linea34" endX="38.5" endY="0.5" layoutX="450.0" layoutY="67.0" startX="-76.0" strokeWidth="7.0" />
+      <Line fx:id="linea67" endX="50.0" layoutX="331.0" layoutY="159.0" startX="-76.0" strokeWidth="7.0" />
+      <Line fx:id="linea56" endX="50.0" layoutX="198.0" layoutY="159.0" startX="-76.0" strokeWidth="7.0" />
+      <Line fx:id="linea78" endX="39.0" layoutX="449.0" layoutY="159.0" startX="-76.0" strokeWidth="7.0" />
       <Line fx:id="Linea15" endX="-76.0" endY="91.0" layoutX="194.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
-      <Line endX="-76.0" endY="91.0" layoutX="321.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
-      <Line endX="-76.0" endY="91.0" layoutX="443.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
-      <Line endX="-76.0" endY="91.0" layoutX="569.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
+      <Line fx:id="linea26" endX="-76.0" endY="91.0" layoutX="321.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
+      <Line fx:id="linea36" endX="-76.0" endY="91.0" layoutX="443.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
+      <Line fx:id="linea48" endX="-76.0" endY="91.0" layoutX="569.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
+      <Line fx:id="linea59" endX="-100.0" endY="90.0" layoutX="218.0" layoutY="163.0" startX="-100.0" strokeWidth="7.0" />
+      <Line fx:id="linea910" endX="24.0" layoutX="217.0" layoutY="253.0" startX="-100.0" strokeWidth="7.0" />
+      <Line fx:id="linea610" endX="-2.0" endY="11.0" layoutX="247.0" layoutY="243.0" startX="-2.0" startY="-81.0" strokeWidth="7.0" />
+      <Line fx:id="linea1011" endX="22.0" layoutX="351.0" layoutY="253.0" startX="-100.0" strokeWidth="7.0" />
+      <Line fx:id="linea711" endX="12.0" layoutX="355.0" layoutY="256.0" startX="12.0" startY="-96.0" strokeWidth="7.0" />
+      <Line fx:id="linea1112" endX="15.0" layoutX="474.0" layoutY="253.0" startX="-100.0" strokeWidth="7.0" />
+      <Line fx:id="linea812" endX="27.0" endY="3.0" layoutX="466.0" layoutY="249.0" startX="27.0" startY="-101.0" strokeWidth="7.0" />
+      <Line fx:id="linea1314" endX="9.0" layoutX="232.0" layoutY="345.0" startX="-115.0" strokeWidth="7.0" />
+      <Line fx:id="linea1415" endX="29.0" layoutX="335.0" layoutY="345.0" startX="-100.0" strokeWidth="7.0" />
+      <Line fx:id="linea1516" endX="23.0" layoutX="467.0" layoutY="345.0" startX="-100.0" strokeWidth="7.0" />
+      <Line fx:id="linea913" endX="9.0" endY="4.0" layoutX="109.0" layoutY="340.0" startX="9.0" startY="-101.0" strokeWidth="7.0" />
+      <Line fx:id="linea1014" endX="14.0" layoutX="230.0" layoutY="347.0" startX="14.0" startY="-111.0" strokeWidth="7.0" />
+      <Line fx:id="linea1115" endX="19.0" layoutX="348.0" layoutY="342.0" startX="19.0" startY="-102.0" strokeWidth="7.0" />
+      <Line fx:id="linea1216" endX="15.0" layoutX="478.0" layoutY="347.0" startX="15.0" startY="-111.0" strokeWidth="7.0" />
    </children>
 </AnchorPane>
