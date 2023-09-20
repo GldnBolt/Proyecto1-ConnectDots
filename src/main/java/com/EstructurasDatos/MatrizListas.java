@@ -24,30 +24,31 @@ public class MatrizListas {
     public void agregarElemento(int fila, int columna, Object valor) {
         ListaEnlazada filaActual = obtenerFila(fila);
 
-        // Crear un nuevo nodo con el valor y la columna
-        Nodo nuevoNodo = new Nodo(valor);
+        Nodo nuevoNodoValor = new Nodo(valor);
+        Nodo nuevoNodoColumna = new Nodo(columna);
+        nuevoNodoValor.setNext(nuevoNodoColumna);
         Nodo nodoActual = filaActual.getHead();
         Nodo nodoAnterior = null;
 
         // Busca la columna o la última columna en la fila
         while (nodoActual != null) {
-            if ((int) nodoActual.data == columna) {
+            if ((int) nodoActual.next.data == columna) {
                 // Actualizar el valor existente en lugar de agregar uno nuevo
                 nodoActual.data = valor;
                 return; // Salir de la función si la columna ya existe
             }
-            nodoAnterior = nodoActual;
-            nodoActual = nodoActual.next;
+            nodoAnterior = nodoActual.next;
+            nodoActual = nodoAnterior.next;
         }
 
         if (nodoAnterior == null) {
             // Si la nueva columna debe ir al principio de la fila
-            nuevoNodo.setNext(nodoActual);
-            filaActual.setHead(nuevoNodo);
+            nuevoNodoColumna.setNext(nodoActual);
+            filaActual.setHead(nuevoNodoValor);
         } else {
-            // Agrega el nuevo nodo en medio de la fila
-            nodoAnterior.setNext(nuevoNodo);
-            nuevoNodo.setNext(nodoActual);
+            // Agrega los nuevos nodos en medio de la fila
+            nodoAnterior.setNext(nuevoNodoValor);
+            nuevoNodoColumna.setNext(nodoActual);
         }
 
     }
@@ -63,24 +64,35 @@ public class MatrizListas {
 
         // Busca el valor en la columna especificada
         while (nodoActual != null) {
-            if ((int) nodoActual.data == columna) {
+            if ((int) nodoActual.next.data == columna) {
                 return (nodoActual.data); // Devuelve el valor almacenado en esa posición
             }
-            nodoActual = nodoActual.next;
+            nodoActual = nodoActual.next.next; // Avanza dos nodos en cada iteración
         }
 
         return 0; // Devuelve 0 si el elemento no se encuentra en la fila y columna especificadas
     }
 
+
     public static void main(String[] args) {
         MatrizListas matriz = new MatrizListas();
 
-        matriz.agregarElemento(1, 1, 1);
-        matriz.agregarElemento(1, 2, 2);
-        matriz.agregarElemento(1,3, 3);
+        // Añadir un valor distinto en cada espacio de la matriz
+        for (int i = 0; i < 4; i++) { // Recorrer las filas
+            for (int j = 0; j < 4; j++) { // Recorrer las columnas
+                int valor = (int) (Math.random() * 100); // Generar un valor aleatorio entre 0 y 9
+                matriz.agregarElemento(i, j, valor); // Agregar el valor a la matriz
+            }
+        }
 
-        System.out.println(matriz.obtenerElemento(1, 1));
-        System.out.println(matriz.obtenerElemento(1, 2));
-        System.out.println(matriz.obtenerElemento(1, 3));
+        // Hacer un print de todos los espacios de la matriz
+        for (int i = 0; i < 4; i++) { // Recorrer las filas
+            for (int j = 0; j < 4; j++) { // Recorrer las columnas
+                Object valor = matriz.obtenerElemento(i, j); // Obtener el valor de la matriz
+                System.out.print(valor + " "); // Imprimir el valor seguido de un espacio
+            }
+            System.out.println(); // Imprimir un salto de línea al final de cada fila
+        }
     }
+
 }
