@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se solucionaron errores">
+    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_9_2023_22_13__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_9_2023_22_13__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_9_2023_22_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_9_2023_22_42__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_9_2023_19_07__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_9_2023_19_07__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaJuegoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaJuegoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Clientes/ventanajuego2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Clientes/ventanajuego2.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,15 +104,7 @@
       <option name="project" value="LOCAL" />
       <updated>1694660234307</updated>
     </task>
-    <task id="LOCAL-00003" summary="Se solucionaron errores">
-      <option name="closed" value="true" />
-      <created>1695186497158</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1695186497158</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,8 +123,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se genero el codigo de la clase que controla las senales recibidas desde arduino" />
-    <MESSAGE value="Se solucionaron errores" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se solucionaron errores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se genero el codigo de la clase que controla las senales recibidas desde arduino" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

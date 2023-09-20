@@ -6,82 +6,89 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Clientes.VentanaJuegoController">
    <children>
-    <Button fx:id="Boton11" ellipsisString="" layoutX="82.0" layoutY="33.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="56.0" text="boton1">
+    <Button fx:id="Button1" ellipsisString="" layoutX="82.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="56.0" text="boton1">
          <graphic>
             <Circle id="1.1" fx:id="circulo1" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic>
       </Button>
-      <ButtonBar layoutX="27.0" layoutY="172.0" prefHeight="56.0" prefWidth="76.0" />
-    <Button ellipsisString="" layoutX="208.0" layoutY="33.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="40.0" text="Boton1.2">
+    <Button fx:id="Button2" ellipsisString="" layoutX="208.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="40.0" text="Boton1.2">
          <graphic>
             <Circle id="1.2" fx:id="circulo12" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic>
       </Button>
-      <ButtonBar layoutX="-99.0" layoutY="211.0" prefHeight="64.0" prefWidth="76.0" />
-      <ButtonBar layoutX="-118.0" layoutY="285.0" prefHeight="40.0" prefWidth="76.0" />
-    <Button ellipsisString="" layoutX="455.0" layoutY="33.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="49.0" text="boton1.4">
+    <Button fx:id="Button4" ellipsisString="" layoutX="455.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="49.0" text="boton1.4">
          <graphic>
             <Circle id="1.4" fx:id="circulo14" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic></Button>
-      <Button ellipsisString="" layoutX="82.0" layoutY="127.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="48.0" text="boton2.1">
+      <Button fx:id="Button5" ellipsisString="" layoutX="82.0" layoutY="127.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="48.0" text="boton2.1">
          <graphic>
             <Circle id="2.1" fx:id="circulo21" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic>
       </Button>
-      <Button ellipsisString="" layoutX="208.0" layoutY="127.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="75.0" text="boton2.2">
+      <Button fx:id="Button6" ellipsisString="" layoutX="208.0" layoutY="127.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="75.0" text="boton2.2">
          <graphic>
             <Circle id="2.2" fx:id="circulo22" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic></Button>
-      <Button ellipsisString="" layoutX="330.0" layoutY="127.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="67.0" text="boton2.3">
+      <Button fx:id="Button7" ellipsisString="" layoutX="330.0" layoutY="127.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="67.0" text="boton2.3">
          <graphic>
             <Circle id="2.3" fx:id="circulo23" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic></Button>
-      <Button ellipsisString="" layoutX="455.0" layoutY="127.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="52.0" text="boton2.4">
+      <Button fx:id="Button8" ellipsisString="" layoutX="455.0" layoutY="127.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="52.0" text="boton2.4">
          <graphic>
             <Circle id="2.4" fx:id="circulo24" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic></Button>
-      <Button ellipsisString="" layoutX="80.0" layoutY="221.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="65.0" text="Boton3.1">
+      <Button fx:id="Button9" ellipsisString="" layoutX="80.0" layoutY="221.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="65.0" text="Boton3.1">
          <graphic>
             <Circle id="3.1" fx:id="circulo31" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic></Button>
-      <Button ellipsisString="" layoutX="208.0" layoutY="221.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="76.0" text="Boton3.2">
+      <Button fx:id="Button10" ellipsisString="" layoutX="208.0" layoutY="221.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="76.0" text="Boton3.2">
          <graphic>
             <Circle id="3.2" fx:id="circulo32" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic></Button>
-    <Button layoutX="330.0" layoutY="33.0" minWidth="69.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="75.0" text="Boton1.3">
+    <Button fx:id="Button3" layoutX="330.0" layoutY="33.0" minWidth="69.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="75.0" text="Boton1.3">
          <graphic>
             <Circle id="1.3" fx:id="circulo13" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic>
       </Button>
-      <Button ellipsisString="" layoutX="330.0" layoutY="221.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="69.0" text="boton3.3">
+      <Button fx:id="Button11" ellipsisString="" layoutX="330.0" layoutY="221.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="69.0" text="boton3.3">
          <graphic>
             <Circle id="3.3" fx:id="circulo33" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic>
       </Button>
-      <Button ellipsisString="" layoutX="455.0" layoutY="221.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="63.0" text="boton3.4">
+      <Button fx:id="Button12" ellipsisString="" layoutX="455.0" layoutY="221.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="63.0" text="boton3.4">
          <graphic>
             <Circle id="3.4" fx:id="circulo34" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic>
       </Button>
-      <Button ellipsisString="" layoutX="80.0" layoutY="313.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="67.0" text="boton4.1">
+      <Button fx:id="Button13" ellipsisString="" layoutX="80.0" layoutY="313.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="67.0" text="boton4.1">
          <graphic>
             <Circle id="4.1" fx:id="circulo41" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic>
       </Button>
-      <Button ellipsisString="" layoutX="208.0" layoutY="313.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="75.0" text="boton4.2">
+      <Button fx:id="Button14" ellipsisString="" layoutX="208.0" layoutY="313.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="75.0" text="boton4.2">
          <graphic>
             <Circle id="4.2" fx:id="circulo42" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic>
       </Button>
-      <Button ellipsisString="" layoutX="330.0" layoutY="313.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="75.0" text="boton4.3">
+      <Button fx:id="Button15" ellipsisString="" layoutX="330.0" layoutY="313.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="75.0" text="boton4.3">
          <graphic>
             <Circle id="4.3" fx:id="circulo43" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic>
       </Button>
-      <Button ellipsisString="" layoutX="455.0" layoutY="313.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="47.0" text="boton4.4">
+      <Button fx:id="Button16" ellipsisString="" layoutX="455.0" layoutY="313.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="47.0" text="boton4.4">
          <graphic>
             <Circle id="4.4" fx:id="circulo44" fill="DODGERBLUE" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic>
       </Button>
+      <Line fx:id="Linea12" endX="50.0" layoutX="192.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
+      <Line fx:id="Linea23" endX="50.0" layoutX="325.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
+      <Line endX="50.0" layoutX="458.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
+      <Line endX="50.0" layoutX="331.0" layoutY="159.0" startX="-76.0" strokeWidth="7.0" />
+      <Line endX="50.0" layoutX="198.0" layoutY="159.0" startX="-76.0" strokeWidth="7.0" />
+      <Line endX="50.0" layoutX="458.0" layoutY="159.0" startX="-76.0" strokeWidth="7.0" />
+      <Line fx:id="Linea15" endX="-76.0" endY="91.0" layoutX="194.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
+      <Line endX="-76.0" endY="91.0" layoutX="321.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
+      <Line endX="-76.0" endY="91.0" layoutX="443.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
+      <Line endX="-76.0" endY="91.0" layoutX="569.0" layoutY="68.0" startX="-76.0" strokeWidth="7.0" />
    </children>
 </AnchorPane>
