@@ -2,6 +2,8 @@ module com.proyecto1connectdots {
     requires javafx.controls;
     requires javafx.fxml;
     requires RXTXcomm;
+    requires java.desktop;
+    requires com.fazecast.jSerialComm;
     // requires RXTXcomm;
 
     exports com;
