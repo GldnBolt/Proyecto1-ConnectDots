@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se modifico el codigo de Arduino y se completo la conexion con java, probado y terminado.&#10;&#10;Bug: Los botones estan en mal estado, manana hay que comprar otros">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_9_2023_22_13_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_9_2023_22_13__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_9_2023_22_42_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_9_2023_22_42__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_9_2023_19_19_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_9_2023_19_19__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se agrego la biblioteca para el manejo de los archivos JSON">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Clientes/ventanajuego2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Clientes/ventanajuego2.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +41,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Xpc/Documents/GitHub/Proyecto1-ConnectDots",
+    "last_opened_file_path": "C:/Users/Xpc/Documents/GitHub/Proyecto1-ConnectDots/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,7 +94,7 @@
       <workItem from="1695254186848" duration="1165000" />
       <workItem from="1695255928313" duration="5835000" />
       <workItem from="1695261773204" duration="1473000" />
-      <workItem from="1695407143984" duration="1207000" />
+      <workItem from="1695407143984" duration="1703000" />
     </task>
     <task id="LOCAL-00001" summary="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
       <option name="closed" value="true" />
@@ -142,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695266696232</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Se agrego la biblioteca para el manejo de los archivos JSON">
+      <option name="closed" value="true" />
+      <created>1695408602778</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695408602778</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +166,8 @@
     <MESSAGE value="Se completo la colocacion de las lineas de la cuadricula y se arreglo la funcion faltante" />
     <MESSAGE value="Se cambio la forma de los botones y se arreglo un error en cuanto al cambio de color, tambien se elimino el texto de los mismos.&#10;&#10;Bug: Cuando se cambia el color, vuelven a ser cuadrados, se arreglara posteriormente" />
     <MESSAGE value="Se modifico el codigo de Arduino y se completo la conexion con java, probado y terminado.&#10;&#10;Bug: Los botones estan en mal estado, manana hay que comprar otros" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se modifico el codigo de Arduino y se completo la conexion con java, probado y terminado.&#10;&#10;Bug: Los botones estan en mal estado, manana hay que comprar otros" />
+    <MESSAGE value="Se agrego la biblioteca para el manejo de los archivos JSON" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrego la biblioteca para el manejo de los archivos JSON" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
