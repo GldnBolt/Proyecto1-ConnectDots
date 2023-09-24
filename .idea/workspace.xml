@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se agrego la biblioteca para el manejo de los archivos JSON">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Clientes/ventanajuego2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Clientes/ventanajuego2.fxml" afterDir="false" />
+    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +41,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Xpc/Documents/GitHub/Proyecto1-ConnectDots/src",
+    "last_opened_file_path": "C:/Users/Xpc/Documents/GitHub/Proyecto1-ConnectDots",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,7 +94,8 @@
       <workItem from="1695254186848" duration="1165000" />
       <workItem from="1695255928313" duration="5835000" />
       <workItem from="1695261773204" duration="1473000" />
-      <workItem from="1695407143984" duration="1703000" />
+      <workItem from="1695407143984" duration="1780000" />
+      <workItem from="1695451076081" duration="418000" />
     </task>
     <task id="LOCAL-00001" summary="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
       <option name="closed" value="true" />
@@ -144,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695408602778</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml">
+      <option name="closed" value="true" />
+      <created>1695408927385</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695408927385</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +176,8 @@
     <MESSAGE value="Se cambio la forma de los botones y se arreglo un error en cuanto al cambio de color, tambien se elimino el texto de los mismos.&#10;&#10;Bug: Cuando se cambia el color, vuelven a ser cuadrados, se arreglara posteriormente" />
     <MESSAGE value="Se modifico el codigo de Arduino y se completo la conexion con java, probado y terminado.&#10;&#10;Bug: Los botones estan en mal estado, manana hay que comprar otros" />
     <MESSAGE value="Se agrego la biblioteca para el manejo de los archivos JSON" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agrego la biblioteca para el manejo de los archivos JSON" />
+    <MESSAGE value="Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
