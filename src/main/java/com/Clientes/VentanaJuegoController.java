@@ -8,97 +8,108 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.shape.Line;
 import javafx.stage.Stage;
+import javafx.scene.shape.Line;
+
 
 public class VentanaJuegoController{
-
     @FXML
-    private Button Boton1;
+    public Button button1;
     @FXML
-    private Button Boton2;
+    public Button button2;
     @FXML
-    private Button Boton3;
+    public Button button3;
     @FXML
-    private Button Boton4;
+    public Button button4;
     @FXML
-    private Button Boton5;
+    public Button button5;
     @FXML
-    private Button Boton6;
+    public Button button7;
     @FXML
-    private Button Boton7;
+    public Button button8;
     @FXML
-    private Button Boton8;
+    public Button button9;
     @FXML
-    private Button Boton9;
+    public Button button10;
     @FXML
-    private Button Boton10;
+    public Button button11;
     @FXML
-    private Button Boton11;
+    public Button button12;
     @FXML
-    private Button Boton12;
+    public Button button13;
     @FXML
-    private Button Boton13;
+    public Button button14;
     @FXML
-    private Button Boton14;
+    public Button button15;
     @FXML
-    private Button Boton15;
+    public Button button16;
     @FXML
-    private Button Boton16;
+    public Line Linea12;
     @FXML
-    private Line linea12;
+    public Line Linea23;
     @FXML
-    private Line linea23;
+    public Line linea67;
     @FXML
-    private Line linea34;
+    public Line linea34;
     @FXML
-    private Line linea67;
+    public Line linea56;
     @FXML
-    private Line linea56;
+    public Line linea78;
     @FXML
-    private Line linea78;
+    public Line Linea15;
     @FXML
-    private Line linea15;
+    public Line linea36;
     @FXML
-    private Line linea26;
+    public Line linea26;
     @FXML
-    private Line linea36;
+    public Line linea48;
     @FXML
-    private Line linea48;
+    public Line linea59;
     @FXML
-    private Line linea59;
+    public Line linea910;
     @FXML
-    private Line linea910;
+    public Line linea610;
     @FXML
-    private Line linea610;
+    public Line linea1011;
     @FXML
-    private Line linea1011;
+    public Line linea711;
     @FXML
-    private Line linea711;
+    public Line linea1112;
     @FXML
-    private Line linea1112;
+    public Line linea812;
     @FXML
-    private Line linea812;
+    public Line linea1314;
     @FXML
-    private Line linea1314;
+    public Line linea1415;
     @FXML
-    private Line linea1415;
+    public Line linea1516;
     @FXML
-    private Line linea1516;
+    public Line linea913;
     @FXML
-    private Line linea913;
+    public Line linea1014;
     @FXML
-    private Line linea1014;
+    public Line linea1115;
     @FXML
-    private Line linea1115;
-    @FXML
-    private Line linea1216;
+    public Line linea1216;
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
-        clickedButton.setStyle("-fx-background-color: #8608a5; -fx-background-radius: 50%; -fx-min-width: 50px; -fx-min-height: 50px; -fx-max-width: 50px; -fx-max-height: 50px;");
+        clickedButton.setStyle("-fx-background-color: #8608a5; -fx-background-radius: 50%; -fx-min-width: 50px; " +
+                "-fx-min-height: 50px; -fx-max-width: 50px; -fx-max-height: 50px;");
 
 
-    }
+        if (clickedButton == button1) {
+            //Linea12.setEndX(button1.getLayoutX());
+            Linea12.setEndY(button1.getLayoutY());
+            Linea15.setEndX(button1.getLayoutX());
+           // Linea15.setEndY(button1.getLayoutY());
+
+        } else if (clickedButton == button2) {
+            Linea23.setEndX(button2.getLayoutX());
+            Linea23.setEndY(button2.getLayoutY());
+            linea26.setEndX(button2.getLayoutX());
+            linea26.setEndY(button2.getLayoutY());
+
+        }}
 }
