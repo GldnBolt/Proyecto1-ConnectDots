@@ -78,14 +78,4 @@ public class ListaEnlazada {
             actual = actual.next;
         }
     }
-
-    // Método para imprimir la lista TEMPORAL
-    public void imprimir() {
-        Nodo actual = head;
-        while (actual != null) {
-            System.out.print(actual.data + " ");
-            actual = actual.next;
-        }
-        System.out.println();
-    }
 }

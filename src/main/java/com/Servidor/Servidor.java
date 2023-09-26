@@ -2,6 +2,7 @@ package com.Servidor;
 
 import com.EstructurasDatos.Cola;
 import com.EstructurasDatos.ListaEnlazada;
+import com.EstructurasDatos.MatrizListas;
 import com.EstructurasDatos.Nodo;
 
 import java.io.DataInputStream;
@@ -12,11 +13,22 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Servidor {
-    private ListaEnlazada clientes = new ListaEnlazada();
-    private Cola colaClientes = new Cola();
-    private ListaEnlazada flujosSalida = new ListaEnlazada();
-    private ListaEnlazada flujosEntrada = new ListaEnlazada();
+    private final ListaEnlazada clientes = new ListaEnlazada();
+    private final Cola colaClientes = new Cola();
+    private final ListaEnlazada flujosSalida = new ListaEnlazada();
+    private final ListaEnlazada flujosEntrada = new ListaEnlazada();
     private ServerSocket serverSocket;
+
+    public void GenerarMatriz(){
+        MatrizListas matriz = new MatrizListas();
+
+        for (int i = 0; i < 4; i++) { // Recorrer las filas
+            for (int j = 0; j < 4; j++) { // Recorrer las columnas
+                matriz.agregarElemento(i, j, 0); // Agregar el valor a la matriz
+            }
+        }
+        matriz.imprimirMatrizRandom();
+    }
 
     public void ejecutar(int puerto) {
         Thread hiloServidor = new Thread(() -> {
@@ -36,7 +48,6 @@ public class Servidor {
 
                     Thread hiloClientes = new Thread(() -> {
                         try {
-                            clientes.imprimir();
                             recibir(clienteSocket, entrada);
                         } finally {
                             cerrarConexion(clienteSocket, salida, entrada);

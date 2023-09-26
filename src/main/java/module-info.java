@@ -1,10 +1,9 @@
 module com.proyecto1connectdots {
     requires javafx.controls;
     requires javafx.fxml;
-    requires RXTXcomm;
     requires java.desktop;
     requires com.fazecast.jSerialComm;
-    // requires RXTXcomm;
+    requires com.google.gson;
 
     exports com;
     exports com.Clientes;
@@ -12,4 +11,5 @@ module com.proyecto1connectdots {
     opens com.Clientes to javafx.fxml;
     exports com.Servidor;
     opens com.Servidor to javafx.fxml;
+    opens com.EstructurasDatos to com.google.gson;
 }

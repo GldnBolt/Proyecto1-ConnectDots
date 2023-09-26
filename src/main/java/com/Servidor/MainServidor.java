@@ -30,6 +30,7 @@ public class MainServidor extends Application {
         stage.setScene(scene);
         stage.resizableProperty().setValue(false);
         stage.show();
+
     }
 
     /**

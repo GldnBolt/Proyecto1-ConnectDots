@@ -1,4 +1,6 @@
 package com.EstructurasDatos;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 public class MatrizListas {
     private ListaEnlazada matriz;
@@ -73,8 +75,7 @@ public class MatrizListas {
         return 0; // Devuelve 0 si el elemento no se encuentra en la fila y columna especificadas
     }
 
-
-    public static void main(String[] args) {
+    public void imprimirMatrizRandom() {
         MatrizListas matriz = new MatrizListas();
 
         // Añadir un valor distinto en cada espacio de la matriz
@@ -93,6 +94,7 @@ public class MatrizListas {
             }
             System.out.println(); // Imprimir un salto de línea al final de cada fila
         }
+
     }
 
 }
