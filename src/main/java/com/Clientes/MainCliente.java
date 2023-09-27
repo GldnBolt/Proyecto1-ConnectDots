@@ -28,6 +28,11 @@ public class MainCliente extends Application {
         stage.resizableProperty().setValue(false);
         stage.show();
     }
+
+    /**
+     * Esta funcion permite cargar la ventana del juego, ademas de crear el scene.
+     * @throws IOException funciona como posible error.
+     */
     public static void ventanajuego() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(VentanaJuegoController.class.getResource("ventanajuego2.fxml"));
         Scene scene2 = new Scene(fxmlLoader.load());

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se completo el codigo del ArduinoSerial">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Clientes/ventanajuego2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Clientes/ventanajuego2.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se hicieron cambios de color y forma" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,9 +22,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "state": "OPEN",
+      "assignee": "GldnBolt",
+      "author": "GldnBolt",
+      "label": "duplicate"
+    }
+  ],
   "lastFilter": {
     "state": "OPEN",
-    "assignee": "GldnBolt"
+    "assignee": "GldnBolt",
+    "author": "GldnBolt",
+    "label": "duplicate"
   }
 }]]></component>
   <component name="GithubPullRequestsUISettings">
@@ -92,7 +100,7 @@
       <workItem from="1695451076081" duration="418000" />
       <workItem from="1695698590299" duration="1006000" />
       <workItem from="1695780919112" duration="134000" />
-      <workItem from="1695787886135" duration="6959000" />
+      <workItem from="1695787886135" duration="7602000" />
     </task>
     <task id="LOCAL-00001" summary="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
       <option name="closed" value="true" />
@@ -182,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695796108896</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Se hicieron cambios de color y forma">
+      <option name="closed" value="true" />
+      <created>1695796806416</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1695796806416</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +226,8 @@
     <MESSAGE value="Se cambio el codigo del arduino por uno que utiliza un thread" />
     <MESSAGE value="Se quitaron unos prints del arduino" />
     <MESSAGE value="Se completo el codigo del ArduinoSerial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se completo el codigo del ArduinoSerial" />
+    <MESSAGE value="Se hicieron cambios de color y forma" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se hicieron cambios de color y forma" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

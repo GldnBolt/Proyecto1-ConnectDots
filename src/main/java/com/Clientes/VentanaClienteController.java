@@ -16,6 +16,10 @@ public class VentanaClienteController {
     @FXML
     private TextField textIp;
 
+    /**
+     * Esta funcion permite la conexion con el servidor, toma el puerto que se le da al servidor y lo verifica para generar la conexion
+     * @throws IOException sirve como posible error
+     */
     public void conectarseServidor() throws IOException {
         if (!textPuerto.getText().isEmpty() && !textIp.getText().isEmpty()) {
             MainCliente.cliente.ejecutar(Integer.parseInt(textPuerto.getText()), textIp.getText());

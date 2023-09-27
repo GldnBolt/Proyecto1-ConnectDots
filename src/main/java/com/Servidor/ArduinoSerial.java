@@ -1,13 +1,20 @@
-package com.Clientes;
+package com.Servidor;
 
 import com.fazecast.jSerialComm.SerialPort;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
+/**
+ * Esta clase permite la conexion con Arduino
+ */
 public class ArduinoSerial extends Thread {
     private SerialPort port;
     private Robot robot;
 
+    /**
+     * Esta funcion lo que permite es abrir la conexion con el puerto, en este caso el COM3 y imprime un mensaje de verificacion.
+     * @throws AWTException esto es parte de la syntaxis de la funcion, funciona como posible error
+     */
     public ArduinoSerial() throws AWTException {
         port = SerialPort.getCommPort("COM7");
         port.openPort();
@@ -16,6 +23,10 @@ public class ArduinoSerial extends Thread {
         robot = new Robot();
     }
 
+    /**
+     * Esta funcion permite, por medio de un thread, recibir los datos que envia el arduino y convertir dichos datos a las teclas
+     * del teclado que en este caso, nos permiten movernos en el juego.
+     */
     @Override
     public void run() {
         while (!Thread.currentThread().isInterrupted()) {

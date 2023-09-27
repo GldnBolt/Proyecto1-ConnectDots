@@ -19,6 +19,9 @@ public class Servidor {
     private final ListaEnlazada flujosEntrada = new ListaEnlazada();
     private ServerSocket serverSocket;
 
+    /**
+     * Esta funcion genera la matriz que se utilizara en el archivo JSON
+     */
     public void GenerarMatriz(){
         MatrizListas matriz = new MatrizListas();
 
@@ -30,6 +33,11 @@ public class Servidor {
         matriz.imprimirMatrizRandom();
     }
 
+    /**
+     * Esta funcion permite que el se cree el socket al cual se van a conectar los clientes y genera una cola de clientes
+     * para almacenar cuantos hay y poder cargar las partidas.
+     * @param puerto es el puerto que se pone a la hora de que se abre la ventana del servidor.
+     */
     public void ejecutar(int puerto) {
         Thread hiloServidor = new Thread(() -> {
             try {
@@ -66,6 +74,10 @@ public class Servidor {
         hiloServidor.start();
     }
 
+    /**
+     * Esta funcion permite enviar los mensajes entre el servidor y los clientes.
+     * @param mensaje es el mensaje que se envia entre el servidor y los clientes.
+     */
     public void enviar(String mensaje) {
         try {
             Nodo nodoSalida = flujosSalida.getHead();
@@ -80,6 +92,11 @@ public class Servidor {
         }
     }
 
+    /**
+     * Esta funcion permite recibir los mensajes que envian los clientes.
+     * @param clienteSocket
+     * @param entrada la entrada de la cual esta leyendo el mensaje
+     */
     public void recibir(Socket clienteSocket, DataInputStream entrada) {
         try {
             while (true) {
@@ -93,6 +110,12 @@ public class Servidor {
         }
     }
 
+    /**
+     * Esta funcion permite cerrar la conexion entre el servidor y los clientes de manera que no haya errores.
+     * @param clienteSocket
+     * @param salida
+     * @param entrada
+     */
     public void cerrarConexion(Socket clienteSocket, DataOutputStream salida, DataInputStream entrada) {
         try {
             clienteSocket.close();

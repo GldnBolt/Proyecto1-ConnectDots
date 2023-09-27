@@ -99,6 +99,11 @@ public class VentanaJuegoController{
     public Line linea1216;
     public AnchorPane Panel;
 
+    /**
+     * Esta funcion permite que a la hora de apretar uno de los 16 botones en la ventana de juego, este cambie de color
+     * Ademas de que llama a la funcion verificar lineas.
+     * @param event
+     */
     @FXML
     private void handleButtonAction(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
@@ -107,127 +112,130 @@ public class VentanaJuegoController{
         verificarLineas();
     }
 
+    /**
+     * Esta funcion permite que se cambie el color de las lineas que conectan los botones si es que dos de ellos que estan juntos se cambian de color.
+     */
     @FXML
     public void verificarLineas(){
         String estiloBase = "-fx-background-color: #0072C6; -fx-background-radius: 50%; -fx-min-width: 50px; -fx-min-height: 50px; -fx-max-width: 50px; -fx-max-height: 50px;";
-        String estiloBoton = "-fx-background-color: #8608a5; -fx-background-radius: 50%; -fx-min-width: 50px; -fx-min-height: 50px; -fx-max-width: 50px; -fx-max-height: 50px;";
+        String estiloButton = "-fx-background-color: #8608a5; -fx-background-radius: 50%; -fx-min-width: 50px; -fx-min-height: 50px; -fx-max-width: 50px; -fx-max-height: 50px;";
 
-        if ((Objects.equals(button1.getStyle(), estiloBoton) & (Objects.equals(button2.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button1.getStyle(), estiloButton) & (Objects.equals(button2.getStyle(), estiloButton)))) {
             button1.setStyle(estiloBase);
             button2.setStyle(estiloBase);
             Linea12.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button2.getStyle(), estiloBoton) & (Objects.equals(button3.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button2.getStyle(), estiloButton) & (Objects.equals(button3.getStyle(), estiloButton)))) {
             button2.setStyle(estiloBase);
             button3.setStyle(estiloBase);
             Linea23.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button3.getStyle(), estiloBoton) & (Objects.equals(button4.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button3.getStyle(), estiloButton) & (Objects.equals(button4.getStyle(), estiloButton)))) {
             button3.setStyle(estiloBase);
             button4.setStyle(estiloBase);
             linea34.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button1.getStyle(), estiloBoton) & (Objects.equals(button5.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button1.getStyle(), estiloButton) & (Objects.equals(button5.getStyle(), estiloButton)))) {
             button1.setStyle(estiloBase);
             button5.setStyle(estiloBase);
             Linea15.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button5.getStyle(), estiloBoton) & (Objects.equals(button6.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button5.getStyle(), estiloButton) & (Objects.equals(button6.getStyle(), estiloButton)))) {
             button5.setStyle(estiloBase);
             button6.setStyle(estiloBase);
             linea56.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button6.getStyle(), estiloBoton) & (Objects.equals(button7.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button6.getStyle(), estiloButton) & (Objects.equals(button7.getStyle(), estiloButton)))) {
             button6.setStyle(estiloBase);
             button7.setStyle(estiloBase);
             linea67.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button7.getStyle(), estiloBoton) & (Objects.equals(button8.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button7.getStyle(), estiloButton) & (Objects.equals(button8.getStyle(), estiloButton)))) {
             button7.setStyle(estiloBase);
             button8.setStyle(estiloBase);
             linea78.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button2.getStyle(), estiloBoton) & Objects.equals(button6.getStyle(), estiloBoton))) {
+        if ((Objects.equals(button2.getStyle(), estiloButton) & Objects.equals(button6.getStyle(), estiloButton))) {
             button2.setStyle(estiloBase);
             button6.setStyle(estiloBase);
             linea26.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button3.getStyle(), estiloBoton) & Objects.equals(button7.getStyle(), estiloBoton))) {
+        if ((Objects.equals(button3.getStyle(), estiloButton) & Objects.equals(button7.getStyle(), estiloButton))) {
             button3.setStyle(estiloBase);
             button7.setStyle(estiloBase);
             linea37.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button4.getStyle(), estiloBoton) & (Objects.equals(button8.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button4.getStyle(), estiloButton) & (Objects.equals(button8.getStyle(), estiloButton)))) {
             button4.setStyle(estiloBase);
             button8.setStyle(estiloBase);
             linea48.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button5.getStyle(), estiloBoton) & (Objects.equals(button9.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button5.getStyle(), estiloButton) & (Objects.equals(button9.getStyle(), estiloButton)))) {
             button5.setStyle(estiloBase);
             button9.setStyle(estiloBase);
             linea59.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button6.getStyle(), estiloBoton) & (Objects.equals(button10.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button6.getStyle(), estiloButton) & (Objects.equals(button10.getStyle(), estiloButton)))) {
             button6.setStyle(estiloBase);
             button10.setStyle(estiloBase);
             linea610.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button7.getStyle(), estiloBoton) & (Objects.equals(button11.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button7.getStyle(), estiloButton) & (Objects.equals(button11.getStyle(), estiloButton)))) {
             button7.setStyle(estiloBase);
             button11.setStyle(estiloBase);
             linea711.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button8.getStyle(), estiloBoton) & (Objects.equals(button12.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button8.getStyle(), estiloButton) & (Objects.equals(button12.getStyle(), estiloButton)))) {
             button8.setStyle(estiloBase);
             button12.setStyle(estiloBase);
             linea812.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button9.getStyle(), estiloBoton) & (Objects.equals(button13.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button9.getStyle(), estiloButton) & (Objects.equals(button13.getStyle(), estiloButton)))) {
             button9.setStyle(estiloBase);
             button13.setStyle(estiloBase);
             linea913.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button10.getStyle(), estiloBoton) & (Objects.equals(button14.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button10.getStyle(), estiloButton) & (Objects.equals(button14.getStyle(), estiloButton)))) {
             button10.setStyle(estiloBase);
             button14.setStyle(estiloBase);
             linea1014.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button11.getStyle(), estiloBoton) & (Objects.equals(button15.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button11.getStyle(), estiloButton) & (Objects.equals(button15.getStyle(), estiloButton)))) {
             button11.setStyle(estiloBase);
             button15.setStyle(estiloBase);
             linea1115.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button12.getStyle(), estiloBoton) & (Objects.equals(button16.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button12.getStyle(), estiloButton) & (Objects.equals(button16.getStyle(), estiloButton)))) {
             button12.setStyle(estiloBase);
             button16.setStyle(estiloBase);
             linea1216.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button9.getStyle(), estiloBoton) & (Objects.equals(button10.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button9.getStyle(), estiloButton) & (Objects.equals(button10.getStyle(), estiloButton)))) {
             button9.setStyle(estiloBase);
             button10.setStyle(estiloBase);
             linea910.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button10.getStyle(), estiloBoton) & (Objects.equals(button11.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button10.getStyle(), estiloButton) & (Objects.equals(button11.getStyle(), estiloButton)))) {
             button10.setStyle(estiloBase);
             button11.setStyle(estiloBase);
             linea1011.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button11.getStyle(), estiloBoton) & (Objects.equals(button12.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button11.getStyle(), estiloButton) & (Objects.equals(button12.getStyle(), estiloButton)))) {
             button11.setStyle(estiloBase);
             button12.setStyle(estiloBase);
             linea1112.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button13.getStyle(), estiloBoton) & (Objects.equals(button14.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button13.getStyle(), estiloButton) & (Objects.equals(button14.getStyle(), estiloButton)))) {
             button13.setStyle(estiloBase);
             button14.setStyle(estiloBase);
             linea1314.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button14.getStyle(), estiloBoton) & (Objects.equals(button15.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button14.getStyle(), estiloButton) & (Objects.equals(button15.getStyle(), estiloButton)))) {
             button14.setStyle(estiloBase);
             button15.setStyle(estiloBase);
             linea1415.setStroke(Paint.valueOf("#33FF36"));
         }
-        if ((Objects.equals(button15.getStyle(), estiloBoton) & (Objects.equals(button16.getStyle(), estiloBoton)))) {
+        if ((Objects.equals(button15.getStyle(), estiloButton) & (Objects.equals(button16.getStyle(), estiloButton)))) {
             button15.setStyle(estiloBase);
             button16.setStyle(estiloBase);
             linea1516.setStroke(Paint.valueOf("#33FF36"));
