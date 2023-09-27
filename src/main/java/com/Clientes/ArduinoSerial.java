@@ -22,7 +22,6 @@ public class ArduinoSerial extends Thread {
             byte[] readBuffer = new byte[1024];
             int numRead = port.readBytes(readBuffer, readBuffer.length);
             String data = new String(readBuffer, 0, numRead);
-            System.out.print(data);
             if (data.equals("1")) {
                 robot.keyPress(KeyEvent.VK_1);
             } else if (data.equals("2")) {

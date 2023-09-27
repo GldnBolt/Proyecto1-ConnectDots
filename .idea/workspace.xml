@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se probaron cambios con respecto al arduino">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/ArduinoSerial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_9_2023_21_42_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_9_2023_21_42__Changes_.xml" beforeDir="false" />
+    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se cambio el codigo del arduino por uno que utiliza un thread">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Clientes/SerialTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/MainArduino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Clientes/ArduinoSerial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/ArduinoSerial.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +79,7 @@
       <workItem from="1695451076081" duration="418000" />
       <workItem from="1695698590299" duration="1006000" />
       <workItem from="1695780919112" duration="134000" />
-      <workItem from="1695787886135" duration="1942000" />
+      <workItem from="1695787886135" duration="4436000" />
     </task>
     <task id="LOCAL-00001" summary="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
       <option name="closed" value="true" />
@@ -148,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695700761265</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Se cambio el codigo del arduino por uno que utiliza un thread">
+      <option name="closed" value="true" />
+      <created>1695790402521</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695790402521</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +178,8 @@
     <MESSAGE value="Se agrego la biblioteca para el manejo de los archivos JSON" />
     <MESSAGE value="Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml" />
     <MESSAGE value="Se probaron cambios con respecto al arduino" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se probaron cambios con respecto al arduino" />
+    <MESSAGE value="Se cambio el codigo del arduino por uno que utiliza un thread" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se cambio el codigo del arduino por uno que utiliza un thread" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
