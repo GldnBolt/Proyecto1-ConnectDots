@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se cambio el codigo del arduino por uno que utiliza un thread">
+    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se quitaron unos prints del arduino">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Clientes/ArduinoSerial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/ArduinoSerial.java" afterDir="false" />
     </list>
@@ -23,6 +23,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "GldnBolt"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="32db9028-b859-4451-bcbf-6822b84913b1" />
+        <option name="url" value="https://github.com/GldnBolt/Proyecto1-ConnectDots.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -79,7 +93,7 @@
       <workItem from="1695451076081" duration="418000" />
       <workItem from="1695698590299" duration="1006000" />
       <workItem from="1695780919112" duration="134000" />
-      <workItem from="1695787886135" duration="4436000" />
+      <workItem from="1695787886135" duration="6519000" />
     </task>
     <task id="LOCAL-00001" summary="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
       <option name="closed" value="true" />
@@ -153,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695790402521</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Se quitaron unos prints del arduino">
+      <option name="closed" value="true" />
+      <created>1695793435693</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1695793435693</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +201,8 @@
     <MESSAGE value="Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml" />
     <MESSAGE value="Se probaron cambios con respecto al arduino" />
     <MESSAGE value="Se cambio el codigo del arduino por uno que utiliza un thread" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se cambio el codigo del arduino por uno que utiliza un thread" />
+    <MESSAGE value="Se quitaron unos prints del arduino" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se quitaron unos prints del arduino" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
