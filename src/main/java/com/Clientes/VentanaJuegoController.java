@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
@@ -96,6 +97,7 @@ public class VentanaJuegoController{
     public Line linea1115;
     @FXML
     public Line linea1216;
+    public AnchorPane Panel;
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
