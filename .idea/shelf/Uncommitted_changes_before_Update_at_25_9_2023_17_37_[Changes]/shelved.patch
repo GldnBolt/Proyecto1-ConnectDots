@@ -1,0 +1,383 @@
+Index: src/main/java/com/EstructurasDatos/MatrizListas.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.EstructurasDatos;\r\n\r\npublic class MatrizListas {\r\n    private ListaEnlazada matriz;\r\n\r\n    public MatrizListas() {\r\n        this.matriz = new ListaEnlazada();\r\n        for (int i = 0; i < 4; i++) {\r\n            ListaEnlazada fila = new ListaEnlazada();\r\n            matriz.agregar(fila);\r\n        }\r\n    }\r\n\r\n    public ListaEnlazada obtenerFila(int fila) {\r\n        Nodo filaActual = matriz.getHead();\r\n\r\n        for (int i = 0; i < fila; i++) {\r\n            filaActual = filaActual.next;\r\n        }\r\n\r\n        return (ListaEnlazada) filaActual.data;\r\n    }\r\n\r\n    public void agregarElemento(int fila, int columna, Object valor) {\r\n        ListaEnlazada filaActual = obtenerFila(fila);\r\n\r\n        Nodo nuevoNodoValor = new Nodo(valor);\r\n        Nodo nuevoNodoColumna = new Nodo(columna);\r\n        nuevoNodoValor.setNext(nuevoNodoColumna);\r\n        Nodo nodoActual = filaActual.getHead();\r\n        Nodo nodoAnterior = null;\r\n\r\n        // Busca la columna o la última columna en la fila\r\n        while (nodoActual != null) {\r\n            if ((int) nodoActual.next.data == columna) {\r\n                // Actualizar el valor existente en lugar de agregar uno nuevo\r\n                nodoActual.data = valor;\r\n                return; // Salir de la función si la columna ya existe\r\n            }\r\n            nodoAnterior = nodoActual.next;\r\n            nodoActual = nodoAnterior.next;\r\n        }\r\n\r\n        if (nodoAnterior == null) {\r\n            // Si la nueva columna debe ir al principio de la fila\r\n            nuevoNodoColumna.setNext(nodoActual);\r\n            filaActual.setHead(nuevoNodoValor);\r\n        } else {\r\n            // Agrega los nuevos nodos en medio de la fila\r\n            nodoAnterior.setNext(nuevoNodoValor);\r\n            nuevoNodoColumna.setNext(nodoActual);\r\n        }\r\n\r\n    }\r\n\r\n    public Object obtenerElemento(int fila, int columna) {\r\n        ListaEnlazada filaActual = obtenerFila(fila);\r\n\r\n        if (filaActual == null) {\r\n            return null;\r\n        }\r\n\r\n        Nodo nodoActual = filaActual.getHead();\r\n\r\n        // Busca el valor en la columna especificada\r\n        while (nodoActual != null) {\r\n            if ((int) nodoActual.next.data == columna) {\r\n                return (nodoActual.data); // Devuelve el valor almacenado en esa posición\r\n            }\r\n            nodoActual = nodoActual.next.next; // Avanza dos nodos en cada iteración\r\n        }\r\n\r\n        return 0; // Devuelve 0 si el elemento no se encuentra en la fila y columna especificadas\r\n    }\r\n\r\n\r\n    public static void main(String[] args) {\r\n        MatrizListas matriz = new MatrizListas();\r\n\r\n        // Añadir un valor distinto en cada espacio de la matriz\r\n        for (int i = 0; i < 4; i++) { // Recorrer las filas\r\n            for (int j = 0; j < 4; j++) { // Recorrer las columnas\r\n                int valor = (int) (Math.random() * 100); // Generar un valor aleatorio entre 0 y 9\r\n                matriz.agregarElemento(i, j, valor); // Agregar el valor a la matriz\r\n            }\r\n        }\r\n\r\n        // Hacer un print de todos los espacios de la matriz\r\n        for (int i = 0; i < 4; i++) { // Recorrer las filas\r\n            for (int j = 0; j < 4; j++) { // Recorrer las columnas\r\n                Object valor = matriz.obtenerElemento(i, j); // Obtener el valor de la matriz\r\n                System.out.print(valor + \" \"); // Imprimir el valor seguido de un espacio\r\n            }\r\n            System.out.println(); // Imprimir un salto de línea al final de cada fila\r\n        }\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/EstructurasDatos/MatrizListas.java b/src/main/java/com/EstructurasDatos/MatrizListas.java
+--- a/src/main/java/com/EstructurasDatos/MatrizListas.java	(revision 5a05612dafde00c4dcf2cdf63d39049792c7394b)
++++ b/src/main/java/com/EstructurasDatos/MatrizListas.java	(date 1695582777997)
+@@ -1,4 +1,6 @@
+ package com.EstructurasDatos;
++import com.google.gson.Gson;
++import com.google.gson.GsonBuilder;
+ 
+ public class MatrizListas {
+     private ListaEnlazada matriz;
+@@ -73,8 +75,7 @@
+         return 0; // Devuelve 0 si el elemento no se encuentra en la fila y columna especificadas
+     }
+ 
+-
+-    public static void main(String[] args) {
++    public void imprimirMatrizRandom() {
+         MatrizListas matriz = new MatrizListas();
+ 
+         // Añadir un valor distinto en cada espacio de la matriz
+@@ -93,6 +94,7 @@
+             }
+             System.out.println(); // Imprimir un salto de línea al final de cada fila
+         }
++
+     }
+ 
+ }
+Index: src/main/java/com/Servidor/Servidor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.Servidor;\r\n\r\nimport com.EstructurasDatos.Cola;\r\nimport com.EstructurasDatos.ListaEnlazada;\r\nimport com.EstructurasDatos.Nodo;\r\n\r\nimport java.io.DataInputStream;\r\nimport java.io.DataOutputStream;\r\nimport java.io.EOFException;\r\nimport java.io.IOException;\r\nimport java.net.ServerSocket;\r\nimport java.net.Socket;\r\n\r\npublic class Servidor {\r\n    private ListaEnlazada clientes = new ListaEnlazada();\r\n    private Cola colaClientes = new Cola();\r\n    private ListaEnlazada flujosSalida = new ListaEnlazada();\r\n    private ListaEnlazada flujosEntrada = new ListaEnlazada();\r\n    private ServerSocket serverSocket;\r\n\r\n    public void ejecutar(int puerto) {\r\n        Thread hiloServidor = new Thread(() -> {\r\n            try {\r\n                serverSocket = new ServerSocket(puerto);\r\n                System.out.println(\"Servidor esperando jugadores en el puerto \" + puerto + \"...\");\r\n                while (true) {\r\n                    Socket clienteSocket = serverSocket.accept();\r\n                    System.out.println(\"Un jugador se ha conectado\");\r\n\r\n                    clientes.agregar(clienteSocket);\r\n                    colaClientes.enqueue(clienteSocket);\r\n                    DataOutputStream salida = new DataOutputStream(clienteSocket.getOutputStream());\r\n                    flujosSalida.agregar(salida);\r\n                    DataInputStream entrada = new DataInputStream(clienteSocket.getInputStream());\r\n                    flujosEntrada.agregar(entrada);\r\n\r\n                    Thread hiloClientes = new Thread(() -> {\r\n                        try {\r\n                            clientes.imprimir();\r\n                            recibir(clienteSocket, entrada);\r\n                        } finally {\r\n                            cerrarConexion(clienteSocket, salida, entrada);\r\n                        }\r\n                    });\r\n                    hiloClientes.start();\r\n\r\n                    if (colaClientes.tamano() >= 2){\r\n                        System.out.println(\"empezar\"); //poner funcion empezar\r\n                    }\r\n                }\r\n            } catch (IOException e) {\r\n                System.out.println(\"Error al iniciar el servidor\");\r\n            }\r\n        });\r\n        hiloServidor.start();\r\n    }\r\n\r\n    public void enviar(String mensaje) {\r\n        try {\r\n            Nodo nodoSalida = flujosSalida.getHead();\r\n            while (nodoSalida != null) {\r\n                DataOutputStream salida = (DataOutputStream) nodoSalida.data;\r\n                salida.writeUTF(mensaje);\r\n                salida.flush();\r\n                nodoSalida = nodoSalida.getNext();\r\n            }\r\n        } catch (IOException e) {\r\n            throw new RuntimeException(e);\r\n        }\r\n    }\r\n\r\n    public void recibir(Socket clienteSocket, DataInputStream entrada) {\r\n        try {\r\n            while (true) {\r\n                String mensajeRecibido = entrada.readUTF();\r\n                enviar(\"Cliente: \" + mensajeRecibido); // Reenviar mensaje a todos los clientes\r\n            }\r\n        } catch (EOFException e) {\r\n            System.out.println(\"Conexión cerrada por el cliente\");\r\n        } catch (IOException e) {\r\n            throw new RuntimeException(e);\r\n        }\r\n    }\r\n\r\n    public void cerrarConexion(Socket clienteSocket, DataOutputStream salida, DataInputStream entrada) {\r\n        try {\r\n            clienteSocket.close();\r\n            clientes.eliminar(clienteSocket);\r\n\r\n            Nodo nodoSalida = flujosSalida.getHead();\r\n            while (nodoSalida != null) {\r\n                if (nodoSalida.data == salida) {\r\n                    flujosSalida.eliminar(salida);\r\n                    break;\r\n                }\r\n                nodoSalida = nodoSalida.getNext();\r\n            }\r\n\r\n            Nodo nodoEntrada = flujosEntrada.getHead();\r\n            while (nodoEntrada != null) {\r\n                if (nodoEntrada.data == entrada) {\r\n                    flujosEntrada.eliminar(entrada);\r\n                    break;\r\n                }\r\n                nodoEntrada = nodoEntrada.getNext();\r\n            }\r\n        } catch (IOException e) {\r\n            throw new RuntimeException(e);\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/Servidor/Servidor.java b/src/main/java/com/Servidor/Servidor.java
+--- a/src/main/java/com/Servidor/Servidor.java	(revision 5a05612dafde00c4dcf2cdf63d39049792c7394b)
++++ b/src/main/java/com/Servidor/Servidor.java	(date 1695582778008)
+@@ -2,6 +2,7 @@
+ 
+ import com.EstructurasDatos.Cola;
+ import com.EstructurasDatos.ListaEnlazada;
++import com.EstructurasDatos.MatrizListas;
+ import com.EstructurasDatos.Nodo;
+ 
+ import java.io.DataInputStream;
+@@ -12,12 +13,23 @@
+ import java.net.Socket;
+ 
+ public class Servidor {
+-    private ListaEnlazada clientes = new ListaEnlazada();
+-    private Cola colaClientes = new Cola();
+-    private ListaEnlazada flujosSalida = new ListaEnlazada();
+-    private ListaEnlazada flujosEntrada = new ListaEnlazada();
++    private final ListaEnlazada clientes = new ListaEnlazada();
++    private final Cola colaClientes = new Cola();
++    private final ListaEnlazada flujosSalida = new ListaEnlazada();
++    private final ListaEnlazada flujosEntrada = new ListaEnlazada();
+     private ServerSocket serverSocket;
+ 
++    public void GenerarMatriz(){
++        MatrizListas matriz = new MatrizListas();
++
++        for (int i = 0; i < 4; i++) { // Recorrer las filas
++            for (int j = 0; j < 4; j++) { // Recorrer las columnas
++                matriz.agregarElemento(i, j, 0); // Agregar el valor a la matriz
++            }
++        }
++        matriz.imprimirMatrizRandom();
++    }
++
+     public void ejecutar(int puerto) {
+         Thread hiloServidor = new Thread(() -> {
+             try {
+@@ -36,7 +48,6 @@
+ 
+                     Thread hiloClientes = new Thread(() -> {
+                         try {
+-                            clientes.imprimir();
+                             recibir(clienteSocket, entrada);
+                         } finally {
+                             cerrarConexion(clienteSocket, salida, entrada);
+Index: src/main/java/com/Servidor/MainServidor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.Servidor;\r\n\r\nimport javafx.application.Application;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Scene;\r\nimport javafx.stage.Stage;\r\n\r\nimport java.io.IOException;\r\n\r\n/**\r\n * Esta clase es la Main del servido, la que controla\r\n * todo lo necesario para el correcto funcionamiento del servidor\r\n */\r\npublic class MainServidor extends Application {\r\n    public static Servidor servidor = new Servidor();\r\n\r\n    /**\r\n     * Esta funcion carga el archivo FXML y le configura los parametros.\r\n     * @param stage the primary stage for this application, onto which\r\n     * the application scene can be set.\r\n     * Applications may create other stages, if needed, but they will not be\r\n     * primary stages.\r\n     * @throws IOException permite que al fallar, haya un error detallado con la parte y el porque del fallo.\r\n     */\r\n    @Override\r\n    public void start(Stage stage) throws IOException {\r\n        FXMLLoader fxmlLoader = new FXMLLoader(MainServidor.class.getResource(\"VentanaServidor.fxml\"));\r\n        Scene scene = new Scene(fxmlLoader.load());\r\n        stage.setTitle(\"Iniciar partida multijugador\");\r\n        stage.setScene(scene);\r\n        stage.resizableProperty().setValue(false);\r\n        stage.show();\r\n    }\r\n\r\n    /**\r\n     * Solo carga la ventana\r\n     * @param args son argumentos necesarios para el correcto funcionamiento de la ventana.\r\n     */\r\n    public static void main(String[] args) {\r\n        launch();\r\n    } //\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/Servidor/MainServidor.java b/src/main/java/com/Servidor/MainServidor.java
+--- a/src/main/java/com/Servidor/MainServidor.java	(revision 5a05612dafde00c4dcf2cdf63d39049792c7394b)
++++ b/src/main/java/com/Servidor/MainServidor.java	(date 1695582778017)
+@@ -30,6 +30,7 @@
+         stage.setScene(scene);
+         stage.resizableProperty().setValue(false);
+         stage.show();
++
+     }
+ 
+     /**
+Index: src/main/java/com/EstructurasDatos/ListaEnlazada.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.EstructurasDatos;\r\n\r\n/**\r\n * Esta clase es una representacion de una lista enlazada simple.\r\n */\r\npublic class ListaEnlazada {\r\n    private Nodo head;\r\n    private int size;\r\n\r\n    /**\r\n     * Constructor de la lista vacia.\r\n     */\r\n    public ListaEnlazada() {\r\n        this.head = null;\r\n        this.size = 0;\r\n    }\r\n\r\n    /**\r\n     * Obtiene el tamaño actual de la lista.\r\n     * @return el tamaño de la lista.\r\n     */\r\n    public int getSize() {\r\n        return size;\r\n    }\r\n\r\n    /**\r\n     * Obtiene el primer elemento de la lista.\r\n     * @return el primer elemento de la lista.\r\n     */\r\n    public Nodo getHead() {\r\n        return head;\r\n    }\r\n\r\n    public void setHead(Nodo head) {\r\n        this.head = head;\r\n    }\r\n\r\n    /**\r\n     *  Agrega un elemento al final de la lista.\r\n     * @param valor elemento a agregar.\r\n     */\r\n    public void agregar(Object valor) {\r\n        Nodo nuevoNodo = new Nodo(valor);\r\n        if (head == null) {\r\n            head = nuevoNodo;\r\n        } else {\r\n            Nodo actual = head;\r\n            while (actual.next != null) {\r\n                actual = actual.next;\r\n            }\r\n            actual.next = nuevoNodo;\r\n        }\r\n        size++;\r\n    }\r\n\r\n    /**\r\n     * Recorre la lista y elimina el elemento dado.\r\n     * @param valor elemento a eliminar.\r\n     */\r\n    public void eliminar(Object valor) {\r\n        if (head == null) {\r\n            return;\r\n        }\r\n\r\n        if (head.data.equals(valor)) {\r\n            head = head.next;\r\n            size--;\r\n            return;\r\n        }\r\n\r\n        Nodo actual = head;\r\n        while (actual.next != null) {\r\n            if (actual.next.data.equals(valor)) {\r\n                actual.next = actual.next.next;\r\n                size--;\r\n                return;\r\n            }\r\n            actual = actual.next;\r\n        }\r\n    }\r\n\r\n    // Método para imprimir la lista TEMPORAL\r\n    public void imprimir() {\r\n        Nodo actual = head;\r\n        while (actual != null) {\r\n            System.out.print(actual.data + \" \");\r\n            actual = actual.next;\r\n        }\r\n        System.out.println();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/EstructurasDatos/ListaEnlazada.java b/src/main/java/com/EstructurasDatos/ListaEnlazada.java
+--- a/src/main/java/com/EstructurasDatos/ListaEnlazada.java	(revision 5a05612dafde00c4dcf2cdf63d39049792c7394b)
++++ b/src/main/java/com/EstructurasDatos/ListaEnlazada.java	(date 1695582778025)
+@@ -78,14 +78,4 @@
+             actual = actual.next;
+         }
+     }
+-
+-    // Método para imprimir la lista TEMPORAL
+-    public void imprimir() {
+-        Nodo actual = head;
+-        while (actual != null) {
+-            System.out.print(actual.data + " ");
+-            actual = actual.next;
+-        }
+-        System.out.println();
+-    }
+ }
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_17_9_2023_19_07_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_17_9_2023_19_07_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_17_9_2023_19_07_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_17_9_2023_19_07_[Changes]/shelved.patch	(revision 5a05612dafde00c4dcf2cdf63d39049792c7394b)
++++ /dev/null	(revision 5a05612dafde00c4dcf2cdf63d39049792c7394b)
+@@ -1,26 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"66cb057c-efd5-495c-8dc9-683bc49ec083\" name=\"Changes\" comment=\"Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2V2tXD0vfqqEJpFl3sP06opl7VU\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Program Files/Java/jre-1.8/lib/RXTXcomm.jar\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Libraries\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.27586207\",\r\n    \"settings.editor.selected.configurable\": \"editor.preferences.tabs\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"66cb057c-efd5-495c-8dc9-683bc49ec083\" name=\"Changes\" comment=\"\" />\r\n      <created>1694046040590</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1694046040590</updated>\r\n      <workItem from=\"1694046041635\" duration=\"179000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694660231007</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694660231007</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694660234307</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694660234307</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz\">\r\n      <created>1694677347893</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694677347893</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz\">\r\n      <created>1694677607873</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694677607873</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\" />\r\n    <MESSAGE value=\"Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision 40b0b1aebdd4d0d5b3935410d398ae016e7c8a8f)
+-+++ b/.idea/workspace.xml	(date 1694677880748)
+-@@ -91,7 +91,14 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1694677607873</updated>
+-     </task>
+--    <option name="localTasksCounter" value="5" />
+-+    <task id="LOCAL-00005" summary="Se pusieron los circulos e intentó hacer la clase para que corriera la interfaz">
+-+      <created>1694677810906</created>
+-+      <option name="number" value="00005" />
+-+      <option name="presentableId" value="LOCAL-00005" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1694677810906</updated>
+-+    </task>
+-+    <option name="localTasksCounter" value="6" />
+-     <servers />
+-   </component>
+-   <component name="TypeScriptGeneratedFilesManager">
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_17_9_2023_19_07__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_17_9_2023_19_07__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_17_9_2023_19_07__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_17_9_2023_19_07__Changes_.xml	(revision 5a05612dafde00c4dcf2cdf63d39049792c7394b)
++++ /dev/null	(revision 5a05612dafde00c4dcf2cdf63d39049792c7394b)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_17_9_2023_19_07_[Changes]" date="1694999287471" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_9_2023_19_07_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 17/9/2023 19:07 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_20_9_2023_12_09__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_20_9_2023_12_09__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_20_9_2023_12_09__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_20_9_2023_12_09__Changes_.xml	(revision 5a05612dafde00c4dcf2cdf63d39049792c7394b)
++++ /dev/null	(revision 5a05612dafde00c4dcf2cdf63d39049792c7394b)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_20_9_2023_12_09_[Changes]" date="1695233405451" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_9_2023_12_09_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 20/9/2023 12:09 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"66cb057c-efd5-495c-8dc9-683bc49ec083\" name=\"Changes\" comment=\"Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/Clientes/VentanaJuegoController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/Clientes/VentanaJuegoController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com/Clientes/ventanajuego2.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com/Clientes/ventanajuego2.fxml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2V2tXD0vfqqEJpFl3sP06opl7VU\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/Xpc/Documents/GitHub/Proyecto1-ConnectDots&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.27586207&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Xpc\\Documents\\GitHub\\Proyecto1-ConnectDots\\src\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"66cb057c-efd5-495c-8dc9-683bc49ec083\" name=\"Changes\" comment=\"\" />\r\n      <created>1694046040590</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1694046040590</updated>\r\n      <workItem from=\"1694046041635\" duration=\"179000\" />\r\n      <workItem from=\"1695234271051\" duration=\"2700000\" />\r\n      <workItem from=\"1695236981732\" duration=\"100000\" />\r\n      <workItem from=\"1695250497726\" duration=\"2504000\" />\r\n      <workItem from=\"1695253753721\" duration=\"426000\" />\r\n      <workItem from=\"1695254186848\" duration=\"1165000\" />\r\n      <workItem from=\"1695255928313\" duration=\"5835000\" />\r\n      <workItem from=\"1695261773204\" duration=\"1473000\" />\r\n      <workItem from=\"1695407143984\" duration=\"1780000\" />\r\n      <workItem from=\"1695451076081\" duration=\"418000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694660231007</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694660231007</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1694660234307</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694660234307</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Se completo la colocacion de las lineas de la cuadricula y se arreglo la funcion faltante\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1695233469417</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695233469417</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Se cambio la forma de los botones y se arreglo un error en cuanto al cambio de color, tambien se elimino el texto de los mismos.&#10;&#10;Bug: Cuando se cambia el color, vuelven a ser cuadrados, se arreglara posteriormente\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1695236560144</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695236560144</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Se modifico el codigo de Arduino y se completo la conexion con java, probado y terminado.&#10;&#10;Bug: Los botones estan en mal estado, manana hay que comprar otros\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1695266696232</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695266696232</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Se agrego la biblioteca para el manejo de los archivos JSON\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1695408602778</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695408602778</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1695408927385</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695408927385</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Se genero el codigo de la clase que controla las senales recibidas desde arduino\" />\r\n    <MESSAGE value=\"Se completo la colocacion de las lineas de la cuadricula y se arreglo la funcion faltante\" />\r\n    <MESSAGE value=\"Se cambio la forma de los botones y se arreglo un error en cuanto al cambio de color, tambien se elimino el texto de los mismos.&#10;&#10;Bug: Cuando se cambia el color, vuelven a ser cuadrados, se arreglara posteriormente\" />\r\n    <MESSAGE value=\"Se modifico el codigo de Arduino y se completo la conexion con java, probado y terminado.&#10;&#10;Bug: Los botones estan en mal estado, manana hay que comprar otros\" />\r\n    <MESSAGE value=\"Se agrego la biblioteca para el manejo de los archivos JSON\" />\r\n    <MESSAGE value=\"Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 5a05612dafde00c4dcf2cdf63d39049792c7394b)
++++ b/.idea/workspace.xml	(date 1695590623667)
+@@ -4,10 +4,19 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml">
++    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se cambio la forma de los botones y se arreglo un error en cuanto al cambio de color, tambien se elimino el texto de los mismos.&#10;&#10;Bug: Cuando se cambia el color, vuelven a ser cuadrados, se arreglara posteriormente">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_9_2023_21_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_9_2023_21_42__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_9_2023_22_11__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_9_2023_22_11__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_9_2023_22_22__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_9_2023_22_22__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_9_2023_23_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_9_2023_23_30__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_9_2023_12_09__Changes_.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaJuegoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaJuegoController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Clientes/ventanajuego2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Clientes/ventanajuego2.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/EstructurasDatos/ListaEnlazada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasDatos/ListaEnlazada.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/EstructurasDatos/MatrizListas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasDatos/MatrizListas.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/Servidor/MainServidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Servidor/MainServidor.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/Servidor/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Servidor/Servidor.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -43,7 +52,7 @@
+     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Xpc/Documents/GitHub/Proyecto1-ConnectDots&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/Xpc/Documents/GitHub/Proyecto1-ConnectDots/jSerialComm-2.10.3.jar&quot;,
+     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+@@ -55,10 +64,25 @@
+     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+ }</component>
+-  <component name="RecentsManager">
+-    <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\Users\Xpc\Documents\GitHub\Proyecto1-ConnectDots\src" />
+-    </key>
++  <component name="RunManager">
++    <configuration name="MatrizListas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.EstructurasDatos.MatrizListas" />
++      <module name="Proyecto1-ConnectDots" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="com.EstructurasDatos.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.MatrizListas" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -75,9 +99,7 @@
+       <workItem from="1695253753721" duration="426000" />
+       <workItem from="1695254186848" duration="1165000" />
+       <workItem from="1695255928313" duration="5835000" />
+-      <workItem from="1695261773204" duration="1473000" />
+-      <workItem from="1695407143984" duration="1780000" />
+-      <workItem from="1695451076081" duration="418000" />
++      <workItem from="1695261773204" duration="1345000" />
+     </task>
+     <task id="LOCAL-00001" summary="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
+       <option name="closed" value="true" />
+@@ -111,31 +133,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1695236560144</updated>
+     </task>
+-    <task id="LOCAL-00005" summary="Se modifico el codigo de Arduino y se completo la conexion con java, probado y terminado.&#10;&#10;Bug: Los botones estan en mal estado, manana hay que comprar otros">
+-      <option name="closed" value="true" />
+-      <created>1695266696232</created>
+-      <option name="number" value="00005" />
+-      <option name="presentableId" value="LOCAL-00005" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1695266696232</updated>
+-    </task>
+-    <task id="LOCAL-00006" summary="Se agrego la biblioteca para el manejo de los archivos JSON">
+-      <option name="closed" value="true" />
+-      <created>1695408602778</created>
+-      <option name="number" value="00006" />
+-      <option name="presentableId" value="LOCAL-00006" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1695408602778</updated>
+-    </task>
+-    <task id="LOCAL-00007" summary="Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml">
+-      <option name="closed" value="true" />
+-      <created>1695408927385</created>
+-      <option name="number" value="00007" />
+-      <option name="presentableId" value="LOCAL-00007" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1695408927385</updated>
+-    </task>
+-    <option name="localTasksCounter" value="8" />
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -156,10 +154,7 @@
+     <MESSAGE value="Se genero el codigo de la clase que controla las senales recibidas desde arduino" />
+     <MESSAGE value="Se completo la colocacion de las lineas de la cuadricula y se arreglo la funcion faltante" />
+     <MESSAGE value="Se cambio la forma de los botones y se arreglo un error en cuanto al cambio de color, tambien se elimino el texto de los mismos.&#10;&#10;Bug: Cuando se cambia el color, vuelven a ser cuadrados, se arreglara posteriormente" />
+-    <MESSAGE value="Se modifico el codigo de Arduino y se completo la conexion con java, probado y terminado.&#10;&#10;Bug: Los botones estan en mal estado, manana hay que comprar otros" />
+-    <MESSAGE value="Se agrego la biblioteca para el manejo de los archivos JSON" />
+-    <MESSAGE value="Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml" />
++    <option name="LAST_COMMIT_MESSAGE" value="Se cambio la forma de los botones y se arreglo un error en cuanto al cambio de color, tambien se elimino el texto de los mismos.&#10;&#10;Bug: Cuando se cambia el color, vuelven a ser cuadrados, se arreglara posteriormente" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
+Index: src/main/java/module-info.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>module com.proyecto1connectdots {\r\n    requires javafx.controls;\r\n    requires javafx.fxml;\r\n    requires RXTXcomm;\r\n    requires java.desktop;\r\n    requires com.fazecast.jSerialComm;\r\n    // requires RXTXcomm;\r\n\r\n    exports com;\r\n    exports com.Clientes;\r\n    opens com to javafx.fxml;\r\n    opens com.Clientes to javafx.fxml;\r\n    exports com.Servidor;\r\n    opens com.Servidor to javafx.fxml;\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/module-info.java b/src/main/java/module-info.java
+--- a/src/main/java/module-info.java	(revision 5a05612dafde00c4dcf2cdf63d39049792c7394b)
++++ b/src/main/java/module-info.java	(date 1695582781249)
+@@ -1,10 +1,9 @@
+ module com.proyecto1connectdots {
+     requires javafx.controls;
+     requires javafx.fxml;
+-    requires RXTXcomm;
+     requires java.desktop;
+     requires com.fazecast.jSerialComm;
+-    // requires RXTXcomm;
++    requires com.google.gson;
+ 
+     exports com;
+     exports com.Clientes;
+@@ -12,4 +11,5 @@
+     opens com.Clientes to javafx.fxml;
+     exports com.Servidor;
+     opens com.Servidor to javafx.fxml;
++    opens com.EstructurasDatos to com.google.gson;
+ }
+\ No newline at end of file
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n\r\n    <groupId>com.example</groupId>\r\n    <artifactId>Proyecto1-ConnectDots</artifactId>\r\n    <version>1.0-SNAPSHOT</version>\r\n    <name>Proyecto1-ConnectDots</name>\r\n\r\n    <properties>\r\n        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\r\n        <junit.version>5.9.2</junit.version>\r\n    </properties>\r\n\r\n    <dependencies>\r\n        <dependency>\r\n            <groupId>org.openjfx</groupId>\r\n            <artifactId>javafx-controls</artifactId>\r\n            <version>18.0.2</version>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.openjfx</groupId>\r\n            <artifactId>javafx-fxml</artifactId>\r\n            <version>18.0.2</version>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>org.junit.jupiter</groupId>\r\n            <artifactId>junit-jupiter-api</artifactId>\r\n            <version>${junit.version}</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.junit.jupiter</groupId>\r\n            <artifactId>junit-jupiter-engine</artifactId>\r\n            <version>${junit.version}</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n    </dependencies>\r\n\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.apache.maven.plugins</groupId>\r\n                <artifactId>maven-compiler-plugin</artifactId>\r\n                <version>3.11.0</version>\r\n                <configuration>\r\n                    <source>18</source>\r\n                    <target>18</target>\r\n                </configuration>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>org.openjfx</groupId>\r\n                <artifactId>javafx-maven-plugin</artifactId>\r\n                <version>0.0.8</version>\r\n                <executions>\r\n                    <execution>\r\n                        <!-- Default configuration for running with: mvn clean javafx:run -->\r\n                        <id>default-cli</id>\r\n                        <configuration>\r\n                            <mainClass>\r\n                                com.example.proyecto1connectdots/com.HelloApplication\r\n                            </mainClass>\r\n                            <launcher>app</launcher>\r\n                            <jlinkZipName>app</jlinkZipName>\r\n                            <jlinkImageName>app</jlinkImageName>\r\n                            <noManPages>true</noManPages>\r\n                            <stripDebug>true</stripDebug>\r\n                            <noHeaderFiles>true</noHeaderFiles>\r\n                        </configuration>\r\n                    </execution>\r\n                </executions>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision 5a05612dafde00c4dcf2cdf63d39049792c7394b)
++++ b/pom.xml	(date 1695582781257)
+@@ -38,6 +38,26 @@
+             <version>${junit.version}</version>
+             <scope>test</scope>
+         </dependency>
++        <dependency>
++            <groupId>com.google.code.gson</groupId>
++            <artifactId>gson</artifactId>
++            <version>2.10.1</version>
++        </dependency>
++        <dependency>
++            <groupId>com.google.code.gson</groupId>
++            <artifactId>gson</artifactId>
++            <version>2.10.1</version>
++        </dependency>
++        <dependency>
++            <groupId>com.google.code.gson</groupId>
++            <artifactId>gson</artifactId>
++            <version>2.10.1</version>
++        </dependency>
++        <dependency>
++            <groupId>com.google.code.gson</groupId>
++            <artifactId>gson</artifactId>
++            <version>2.10.1</version>
++        </dependency>
+     </dependencies>
+ 
+     <build>

@@ -3,6 +3,9 @@ package com.EstructurasDatos;
 public class MatrizListas {
     private ListaEnlazada matriz;
 
+    /**
+     * Contructor de la clase matriz formada por listas de listas enlazadas.
+     */
     public MatrizListas() {
         this.matriz = new ListaEnlazada();
         for (int i = 0; i < 4; i++) {
@@ -11,6 +14,11 @@ public class MatrizListas {
         }
     }
 
+    /**
+     * Obtiene las listas dentro de la matriz
+     * @param fila numero de listas
+     * @return el dato dentro de la lista
+     */
     public ListaEnlazada obtenerFila(int fila) {
         Nodo filaActual = matriz.getHead();
 
@@ -20,6 +28,12 @@ public class MatrizListas {
         return (ListaEnlazada) filaActual.data;
     }
 
+    /**
+     * Recorre las filas y colunmas para agregar el dato en el espacio específico dado.
+     * @param fila numero de filas
+     * @param columna numero de columnas
+     * @param valor dato que se va a agregar
+     */
     public void agregarElemento(int fila, int columna, Object valor) {
         ListaEnlazada filaActual = obtenerFila(fila);
 
@@ -52,6 +66,12 @@ public class MatrizListas {
 
     }
 
+    /**
+     * Recorre la matriz y hace return del valor buscado en las coordenadas dadas.
+     * @param fila coordenada de fila
+     * @param columna coordenada de columna
+     * @return elemento en la posicion
+     */
     public int obtenerElemento(int fila, int columna) {
         ListaEnlazada filaActual = obtenerFila(fila);
 

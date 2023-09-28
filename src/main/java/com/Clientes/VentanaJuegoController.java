@@ -111,6 +111,9 @@ public class VentanaJuegoController{
     String matrizJsonActualizada;
 
 
+    /**
+     * Inicializa variables de la clase.
+     */
     public void initialize(){
         List<Button> botonesAgregados = Arrays.asList(button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16);
         List<Line> lineasAgregadas = Arrays.asList(Linea12, Linea15, Linea23, linea34, linea26, linea67, linea78, linea37, linea48, linea56, linea59, linea711, linea610, linea812, linea910, linea913, linea1011, linea1014, linea1112, linea1115, linea1216, linea1314, linea1415, linea1516);
@@ -118,6 +121,10 @@ public class VentanaJuegoController{
         lineas.addAll(lineasAgregadas);
     }
 
+    /**
+     * Cambia el color de los botones al ser presionados.
+     * @param event evento de boton presionado
+     */
     @FXML
     private void handleButtonAction(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
@@ -127,6 +134,10 @@ public class VentanaJuegoController{
         verificarFinal();
     }
 
+    /**
+     * Cambia los botones de activados a desactivados.
+     * @param estado booleano que representa el estado de los botones
+     */
     @FXML
     public void cambiarEstadoBotones(boolean estado){
         if (estado){
@@ -140,6 +151,10 @@ public class VentanaJuegoController{
         }
     }
 
+    /**
+     * Recibe el mensaje del servidor.
+     * @param mensaje String del mensaje recibido
+     */
     @FXML
     public void recibir(String mensaje) {
         estado = !estado;
@@ -149,6 +164,10 @@ public class VentanaJuegoController{
         }
     }
 
+    /**
+     * Actualiza la matriz con la que recibe.
+     * @param mensajes Matriz recibida en json
+     */
     @FXML
     public void actualizarMatriz(String mensajes) {
         if (mensajes.equals("turno")){
@@ -159,12 +178,19 @@ public class VentanaJuegoController{
         }
     }
 
+    /**
+     * Actualiza y envia la matriz con las nuevas coordenadas.
+     */
     @FXML
     public void enviarMatriz() {
         matrizJsonActualizada = gson.toJson(matriz);
         MainCliente.cliente.enviar("turno");
         //MainCliente.cliente.enviar(matrizJsonActualizada);
     }
+
+    /**
+     * Verifica que todas las lineas se hayan pintado y finaliza la partida.
+     */
     @FXML
     public void verificarFinal() {
         for (Line linea : lineas){
@@ -179,6 +205,10 @@ public class VentanaJuegoController{
         ventanaFinal.setContentText("¡Gracias por jugar!");
         ventanaFinal.showAndWait();
     }
+
+    /**
+     * Verifica los botones que se han presionado para dibujar las lineas y actualizar la matriz.
+     */
     @FXML
     public void verificarLineas(){
         if ((Objects.equals(button1.getStyle(), estiloBoton) & (Objects.equals(button2.getStyle(), estiloBoton)))) {

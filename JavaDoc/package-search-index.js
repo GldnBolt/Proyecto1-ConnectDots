@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"com.proyecto1connectdots","l":"com"},{"m":"com.proyecto1connectdots","l":"com.Clientes"},{"m":"com.proyecto1connectdots","l":"com.EstructurasDatos"},{"m":"com.proyecto1connectdots","l":"com.Servidor"}];updateSearchResults();
