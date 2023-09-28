@@ -16,7 +16,7 @@ public class ArduinoSerial extends Thread {
      * @throws AWTException esto es parte de la syntaxis de la funcion, funciona como posible error
      */
     public ArduinoSerial() throws AWTException {
-        port = SerialPort.getCommPort("COM7");
+        port = SerialPort.getCommPort("COM5");
         port.openPort();
         port.setComPortTimeouts(SerialPort.TIMEOUT_READ_BLOCKING, 100, 0);
         System.out.println("Puerto serie abierto: " + port.getSystemPortName());

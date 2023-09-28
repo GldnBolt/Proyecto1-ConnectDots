@@ -3,6 +3,7 @@ package com.Clientes;
 import com.EstructurasDatos.MatrizListas;
 import java.util.*;
 
+import com.google.gson.Gson;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -104,6 +105,11 @@ public class VentanaJuegoController{
 
     @FXML
     MatrizListas matriz = new MatrizListas();
+    @FXML
+    Gson gson = new Gson();
+    @FXML
+    String matrizJsonActualizada;
+
 
     public void initialize(){
         List<Button> botonesAgregados = Arrays.asList(button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16);
@@ -136,24 +142,33 @@ public class VentanaJuegoController{
 
     @FXML
     public void recibir(String mensaje) {
-        System.out.println("Cliente ha recibido:" + mensaje);
         estado = !estado;
         if (mensaje.equals("turno")){
             cambiarEstadoBotones(estado);
+            //actualizarMatriz(mensaje);
+        }
+    }
+
+    @FXML
+    public void actualizarMatriz(String mensajes) {
+        if (mensajes.equals("turno")){
         } else {
-            System.out.println("manejo de matriz");
+            matriz = gson.fromJson(mensajes, MatrizListas.class);
+            matrizJsonActualizada = gson.toJson(matriz);
+            System.out.println(matrizJsonActualizada);
         }
     }
 
     @FXML
     public void enviarMatriz() {
+        matrizJsonActualizada = gson.toJson(matriz);
         MainCliente.cliente.enviar("turno");
+        //MainCliente.cliente.enviar(matrizJsonActualizada);
     }
     @FXML
     public void verificarFinal() {
         for (Line linea : lineas){
             if (linea.getStroke().equals(Paint.valueOf("#33FF36"))){
-                System.out.println("bien");
             } else {
                 return;
             }
@@ -170,144 +185,191 @@ public class VentanaJuegoController{
             button1.setStyle(estiloBase);
             button2.setStyle(estiloBase);
             Linea12.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(0, 0, 1);
+            matriz.agregarElemento(0, 1,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button2.getStyle(), estiloBoton) & (Objects.equals(button3.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button2.getStyle(), estiloBoton) & (Objects.equals(button3.getStyle(), estiloBoton)))) {
             button2.setStyle(estiloBase);
             button3.setStyle(estiloBase);
-            enviarMatriz();
             Linea23.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(1, 1, 1);
+            matriz.agregarElemento(1, 2,1);//
+            enviarMatriz();
         }
-        if ((Objects.equals(button3.getStyle(), estiloBoton) & (Objects.equals(button4.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button3.getStyle(), estiloBoton) & (Objects.equals(button4.getStyle(), estiloBoton)))) {
             button3.setStyle(estiloBase);
             button4.setStyle(estiloBase);
             linea34.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(1, 3, 1);
+            matriz.agregarElemento(1, 4,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button1.getStyle(), estiloBoton) & (Objects.equals(button5.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button1.getStyle(), estiloBoton) & (Objects.equals(button5.getStyle(), estiloBoton)))) {
             button1.setStyle(estiloBase);
             button5.setStyle(estiloBase);
             Linea15.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(1, 1, 1);
+            matriz.agregarElemento(2, 1,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button5.getStyle(), estiloBoton) & (Objects.equals(button6.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button5.getStyle(), estiloBoton) & (Objects.equals(button6.getStyle(), estiloBoton)))) {
             button5.setStyle(estiloBase);
             button6.setStyle(estiloBase);
             linea56.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(2, 1, 1);
+            matriz.agregarElemento(2, 2,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button6.getStyle(), estiloBoton) & (Objects.equals(button7.getStyle(), estiloBoton)))) {
-            button6.setStyle(estiloBase);
+        else if ((Objects.equals(button6.getStyle(), estiloBoton) & (Objects.equals(button7.getStyle(), estiloBoton)))) {
             button7.setStyle(estiloBase);
             linea67.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(2, 2, 1);
+            matriz.agregarElemento(2, 3,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button7.getStyle(), estiloBoton) & (Objects.equals(button8.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button7.getStyle(), estiloBoton) & (Objects.equals(button8.getStyle(), estiloBoton)))) {
             button7.setStyle(estiloBase);
             button8.setStyle(estiloBase);
             linea78.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(2, 3, 1);
+            matriz.agregarElemento(2, 4,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button2.getStyle(), estiloBoton) & Objects.equals(button6.getStyle(), estiloBoton))) {
+        else if ((Objects.equals(button2.getStyle(), estiloBoton) & Objects.equals(button6.getStyle(), estiloBoton))) {
             button2.setStyle(estiloBase);
             button6.setStyle(estiloBase);
             linea26.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(1, 2, 1);
+            matriz.agregarElemento(2, 2,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button3.getStyle(), estiloBoton) & Objects.equals(button7.getStyle(), estiloBoton))) {
+        else if ((Objects.equals(button3.getStyle(), estiloBoton) & Objects.equals(button7.getStyle(), estiloBoton))) {
             button3.setStyle(estiloBase);
             button7.setStyle(estiloBase);
             linea37.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(1, 3, 1);
+            matriz.agregarElemento(2, 3,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button4.getStyle(), estiloBoton) & (Objects.equals(button8.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button4.getStyle(), estiloBoton) & (Objects.equals(button8.getStyle(), estiloBoton)))) {
             button4.setStyle(estiloBase);
             button8.setStyle(estiloBase);
             linea48.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(1, 4, 1);
+            matriz.agregarElemento(2, 4,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button5.getStyle(), estiloBoton) & (Objects.equals(button9.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button5.getStyle(), estiloBoton) & (Objects.equals(button9.getStyle(), estiloBoton)))) {
             button5.setStyle(estiloBase);
             button9.setStyle(estiloBase);
             linea59.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(2, 1, 1);
+            matriz.agregarElemento(3, 1,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button6.getStyle(), estiloBoton) & (Objects.equals(button10.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button6.getStyle(), estiloBoton) & (Objects.equals(button10.getStyle(), estiloBoton)))) {
             button6.setStyle(estiloBase);
             button10.setStyle(estiloBase);
             linea610.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(2, 2, 1);
+            matriz.agregarElemento(3, 2,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button7.getStyle(), estiloBoton) & (Objects.equals(button11.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button7.getStyle(), estiloBoton) & (Objects.equals(button11.getStyle(), estiloBoton)))){
             button7.setStyle(estiloBase);
             button11.setStyle(estiloBase);
             linea711.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(2, 3, 1);
+            matriz.agregarElemento(3, 3,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button8.getStyle(), estiloBoton) & (Objects.equals(button12.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button8.getStyle(), estiloBoton) & (Objects.equals(button12.getStyle(), estiloBoton)))) {
             button8.setStyle(estiloBase);
             button12.setStyle(estiloBase);
             linea812.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(2, 4, 1);
+            matriz.agregarElemento(3, 4,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button9.getStyle(), estiloBoton) & (Objects.equals(button13.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button9.getStyle(), estiloBoton) & (Objects.equals(button13.getStyle(), estiloBoton)))) {
             button9.setStyle(estiloBase);
             button13.setStyle(estiloBase);
             linea913.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(3, 1, 1);
+            matriz.agregarElemento(4, 1,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button10.getStyle(), estiloBoton) & (Objects.equals(button14.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button10.getStyle(), estiloBoton) & (Objects.equals(button14.getStyle(), estiloBoton)))) {
             button10.setStyle(estiloBase);
             button14.setStyle(estiloBase);
             linea1014.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(3, 2, 1);
+            matriz.agregarElemento(4, 2,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button11.getStyle(), estiloBoton) & (Objects.equals(button15.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button11.getStyle(), estiloBoton) & (Objects.equals(button15.getStyle(), estiloBoton)))) {
             button11.setStyle(estiloBase);
             button15.setStyle(estiloBase);
             linea1115.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(3, 3, 1);
+            matriz.agregarElemento(4, 3,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button12.getStyle(), estiloBoton) & (Objects.equals(button16.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button12.getStyle(), estiloBoton) & (Objects.equals(button16.getStyle(), estiloBoton)))) {
             button12.setStyle(estiloBase);
             button16.setStyle(estiloBase);
             linea1216.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(3, 4, 1);
+            matriz.agregarElemento(4, 4,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button9.getStyle(), estiloBoton) & (Objects.equals(button10.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button9.getStyle(), estiloBoton) & (Objects.equals(button10.getStyle(), estiloBoton)))) {
             button9.setStyle(estiloBase);
             button10.setStyle(estiloBase);
             linea910.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(3, 1, 1);
+            matriz.agregarElemento(3, 2,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button10.getStyle(), estiloBoton) & (Objects.equals(button11.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button10.getStyle(), estiloBoton) & (Objects.equals(button11.getStyle(), estiloBoton)))) {
             button10.setStyle(estiloBase);
             button11.setStyle(estiloBase);
             linea1011.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(3, 2, 1);
+            matriz.agregarElemento(3, 3,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button11.getStyle(), estiloBoton) & (Objects.equals(button12.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button11.getStyle(), estiloBoton) & (Objects.equals(button12.getStyle(), estiloBoton)))) {
             button11.setStyle(estiloBase);
             button12.setStyle(estiloBase);
             linea1112.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(3, 3, 1);
+            matriz.agregarElemento(3, 4,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button13.getStyle(), estiloBoton) & (Objects.equals(button14.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button13.getStyle(), estiloBoton) & (Objects.equals(button14.getStyle(), estiloBoton)))) {
             button13.setStyle(estiloBase);
             button14.setStyle(estiloBase);
             linea1314.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(4, 1, 1);
+            matriz.agregarElemento(4, 2,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button14.getStyle(), estiloBoton) & (Objects.equals(button15.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button14.getStyle(), estiloBoton) & (Objects.equals(button15.getStyle(), estiloBoton)))) {
             button14.setStyle(estiloBase);
             button15.setStyle(estiloBase);
             linea1415.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(4, 2, 1);
+            matriz.agregarElemento(4, 3,1);
             enviarMatriz();
         }
-        if ((Objects.equals(button15.getStyle(), estiloBoton) & (Objects.equals(button16.getStyle(), estiloBoton)))) {
+        else if ((Objects.equals(button15.getStyle(), estiloBoton) & (Objects.equals(button16.getStyle(), estiloBoton)))) {
             button15.setStyle(estiloBase);
             button16.setStyle(estiloBase);
             linea1516.setStroke(Paint.valueOf("#33FF36"));
+            matriz.agregarElemento(4, 3, 1);
+            matriz.agregarElemento(4, 4,1);
             enviarMatriz();
         }
     }

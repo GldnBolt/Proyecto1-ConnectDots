@@ -9,7 +9,6 @@ public class MatrizListas {
             ListaEnlazada fila = new ListaEnlazada();
             matriz.agregar(fila);
         }
-
     }
 
     public ListaEnlazada obtenerFila(int fila) {
@@ -18,7 +17,6 @@ public class MatrizListas {
         for (int i = 0; i < fila; i++) {
             filaActual = filaActual.next;
         }
-
         return (ListaEnlazada) filaActual.data;
     }
 
@@ -54,11 +52,11 @@ public class MatrizListas {
 
     }
 
-    public Object obtenerElemento(int fila, int columna) {
+    public int obtenerElemento(int fila, int columna) {
         ListaEnlazada filaActual = obtenerFila(fila);
 
         if (filaActual == null) {
-            return null;
+            return 0;
         }
 
         Nodo nodoActual = filaActual.getHead();
@@ -66,7 +64,7 @@ public class MatrizListas {
         // Busca el valor en la columna especificada
         while (nodoActual != null) {
             if ((int) nodoActual.next.data == columna) {
-                return (nodoActual.data); // Devuelve el valor almacenado en esa posición
+                return (int) nodoActual.data; // Devuelve el valor almacenado en esa posición
             }
             nodoActual = nodoActual.next.next; // Avanza dos nodos en cada iteración
         }

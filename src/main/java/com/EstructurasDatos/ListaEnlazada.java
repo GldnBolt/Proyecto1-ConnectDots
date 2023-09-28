@@ -53,6 +53,7 @@ public class ListaEnlazada {
         size++;
     }
 
+
     /**
      * Recorre la lista y elimina el elemento dado.
      * @param valor elemento a eliminar.

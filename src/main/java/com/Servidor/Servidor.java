@@ -4,6 +4,7 @@ import com.EstructurasDatos.Cola;
 import com.EstructurasDatos.ListaEnlazada;
 import com.EstructurasDatos.MatrizListas;
 import com.EstructurasDatos.Nodo;
+import com.google.gson.Gson;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -21,6 +22,8 @@ public class Servidor {
     private ServerSocket serverSocket;
     private int turno;
     MatrizListas matriz = new MatrizListas();
+    Gson gson = new Gson();
+    String matrizJson;
 
     /**
      * Esta función permite que se cree el socket al cual se van a conectar los clientes y genera una cola de clientes
@@ -70,21 +73,25 @@ public class Servidor {
     public void empezarJuego(){
         if (colaClientes.tamano() >= 2){
             System.out.println("empezar"); //poner funcion empezar
-            cambiarTurno("turno");
+            turno++;
+            enviarTodos("turno");
         } else {
             System.out.println("Esperando más jugadores");
+            //manejoMatriz();
         }
     }
 
-    /**
-     * Esta función envia a todos los clientes un mensaje que les hace cambiar el turno
-     * @param mensajeRecibido mensaje referido a los clientes
-     */
-    public void cambiarTurno(String mensajeRecibido){
-        turno++;
-        //colaClientes.enqueue(clienteSocket);
-        enviarTodos(mensajeRecibido);
-        //enviarEspecifico("turno");
+    public void manejoMatriz(){
+        if (this.matriz.obtenerElemento(1, 1) != 0){
+            for (int i = 0; i < 4; i++) {
+                for (int j = 0; j < 4; j++) {
+                    this.matriz.agregarElemento(i, j, 0);
+                }
+            }
+        }
+        this.matrizJson = gson.toJson(this.matriz);
+        System.out.println(this.matrizJson);
+
     }
 
     /**
@@ -129,12 +136,18 @@ public class Servidor {
         try {
             while (true) {
                 String mensajeRecibido = entrada.readUTF();
-                //enviarTodos(mensajeRecibido); // Reenviar mensaje a todos los clientes
-                colaClientes.dequeue();
-                cambiarTurno(mensajeRecibido);
-                System.out.println("el servidor recibio el turno");
-                colaClientes.enqueue(clienteSocket);
 
+                if (mensajeRecibido.equals("turno")) {
+                    turno++;
+                    //enviarEspecifico(mensajeRecibido);
+                    colaClientes.dequeue();
+                    enviarTodos(mensajeRecibido);
+                    colaClientes.enqueue(clienteSocket);
+                } else {
+                    matriz = gson.fromJson(mensajeRecibido,MatrizListas.class);
+                    matrizJson = gson.toJson(matriz);
+                    enviarTodos(matrizJson);
+                }
             }
         } catch (EOFException e) {
             System.out.println("Conexión cerrada por el cliente");
