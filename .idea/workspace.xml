@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se hicieron cambios de color y forma" />
+    <list default="true" id="66cb057c-efd5-495c-8dc9-683bc49ec083" name="Changes" comment="Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_9_2023_21_05__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_9_2023_21_05__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_9_2023_20_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_9_2023_20_34__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Clientes/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Clientes/MainCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/MainCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaJuegoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Clientes/VentanaJuegoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/EstructurasDatos/MatrizListas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/EstructurasDatos/MatrizListas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Servidor/MainServidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Servidor/MainServidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Servidor/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Servidor/Servidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Servidor/VentanaServidorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Servidor/VentanaServidorController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,30 +33,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
-    {
-      "state": "OPEN",
-      "assignee": "GldnBolt",
-      "author": "GldnBolt",
-      "label": "duplicate"
-    }
-  ],
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "GldnBolt",
-    "author": "GldnBolt",
-    "label": "duplicate"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="32db9028-b859-4451-bcbf-6822b84913b1" />
-        <option name="url" value="https://github.com/GldnBolt/Proyecto1-ConnectDots.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -55,6 +43,7 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
@@ -63,15 +52,16 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Xpc/Documents/GitHub/Prueba_Arduino",
+    "last_opened_file_path": "C:/Users/Xpc/Documents/GitHub/Proyecto1-ConnectDots/jSerialComm-2.10.3.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.27586207",
-    "settings.editor.selected.configurable": "vcs.Git",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -79,6 +69,15 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Xpc\Documents\GitHub\Proyecto1-ConnectDots\src" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Servidor" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.Servidor.MainServidor" />
+      <module name="Proyecto1-ConnectDots" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -98,9 +97,7 @@
       <workItem from="1695261773204" duration="1473000" />
       <workItem from="1695407143984" duration="1780000" />
       <workItem from="1695451076081" duration="418000" />
-      <workItem from="1695698590299" duration="1006000" />
-      <workItem from="1695780919112" duration="134000" />
-      <workItem from="1695787886135" duration="7602000" />
+      <workItem from="1695698590299" duration="978000" />
     </task>
     <task id="LOCAL-00001" summary="Se genero el codigo de la clase que controla las senales recibidas desde arduino">
       <option name="closed" value="true" />
@@ -158,47 +155,7 @@
       <option name="project" value="LOCAL" />
       <updated>1695408927385</updated>
     </task>
-    <task id="LOCAL-00008" summary="Se probaron cambios con respecto al arduino">
-      <option name="closed" value="true" />
-      <created>1695700761265</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1695700761265</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Se cambio el codigo del arduino por uno que utiliza un thread">
-      <option name="closed" value="true" />
-      <created>1695790402521</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1695790402521</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Se quitaron unos prints del arduino">
-      <option name="closed" value="true" />
-      <created>1695793435693</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1695793435693</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Se completo el codigo del ArduinoSerial">
-      <option name="closed" value="true" />
-      <created>1695796108896</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1695796108896</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Se hicieron cambios de color y forma">
-      <option name="closed" value="true" />
-      <created>1695796806416</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1695796806416</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,12 +179,7 @@
     <MESSAGE value="Se modifico el codigo de Arduino y se completo la conexion con java, probado y terminado.&#10;&#10;Bug: Los botones estan en mal estado, manana hay que comprar otros" />
     <MESSAGE value="Se agrego la biblioteca para el manejo de los archivos JSON" />
     <MESSAGE value="Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml" />
-    <MESSAGE value="Se probaron cambios con respecto al arduino" />
-    <MESSAGE value="Se cambio el codigo del arduino por uno que utiliza un thread" />
-    <MESSAGE value="Se quitaron unos prints del arduino" />
-    <MESSAGE value="Se completo el codigo del ArduinoSerial" />
-    <MESSAGE value="Se hicieron cambios de color y forma" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se hicieron cambios de color y forma" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se arreglaron ciertos errores en el FXML de la ventanajuego2.fxml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

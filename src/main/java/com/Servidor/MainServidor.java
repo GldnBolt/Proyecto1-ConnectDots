@@ -12,6 +12,7 @@ import java.io.IOException;
  * todo lo necesario para el correcto funcionamiento del servidor
  */
 public class MainServidor extends Application {
+    public VentanaServidorController ventanaServidorController = new VentanaServidorController();
     public static Servidor servidor = new Servidor();
 
     /**
@@ -26,6 +27,8 @@ public class MainServidor extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainServidor.class.getResource("VentanaServidor.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        ventanaServidorController = fxmlLoader.getController();
+
         stage.setTitle("Iniciar partida multijugador");
         stage.setScene(scene);
         stage.resizableProperty().setValue(false);

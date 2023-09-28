@@ -12,6 +12,8 @@ import java.io.IOException;
  */
 public class MainCliente extends Application {
     public static Cliente cliente = new Cliente();
+    public VentanaClienteController ventanaClienteController = new VentanaClienteController();
+    public static VentanaJuegoController ventanaJuegoController = new VentanaJuegoController();
 
     /**
      * Esta funcion carga el archivo FXML de la ventana de chat del cliente, crea la scene, el titulo y todo lo necesario para la interfaz grafica.
@@ -23,6 +25,8 @@ public class MainCliente extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainCliente.class.getResource("VentanaCliente.fxml"));
         Scene scene2 = new Scene(fxmlLoader.load());
+        ventanaClienteController = fxmlLoader.getController();
+
         stage.setTitle("Unirse a la partida");
         stage.setScene(scene2);
         stage.resizableProperty().setValue(false);
@@ -37,7 +41,10 @@ public class MainCliente extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(VentanaJuegoController.class.getResource("ventanajuego2.fxml"));
         Scene scene2 = new Scene(fxmlLoader.load());
         Stage Venjuego= new Stage();
+        ventanaJuegoController = fxmlLoader.getController();
+
         Venjuego.setScene(scene2);
+        Venjuego.resizableProperty().setValue(false);
         Venjuego.show();
     }
     /**

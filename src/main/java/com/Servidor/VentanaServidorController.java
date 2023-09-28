@@ -9,6 +9,9 @@ public class VentanaServidorController {
     @FXML
     private TextField textPuerto;
 
+    /**
+     * Inicia la conexión enviando los datos de la barra de texto de la interfaz.
+     */
     public void iniciarConexion(){
         if (!textPuerto.getText().isEmpty()) {
             try {

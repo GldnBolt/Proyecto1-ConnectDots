@@ -1,6 +1,4 @@
 package com.EstructurasDatos;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 public class MatrizListas {
     private ListaEnlazada matriz;
@@ -11,6 +9,7 @@ public class MatrizListas {
             ListaEnlazada fila = new ListaEnlazada();
             matriz.agregar(fila);
         }
+
     }
 
     public ListaEnlazada obtenerFila(int fila) {
@@ -73,28 +72,6 @@ public class MatrizListas {
         }
 
         return 0; // Devuelve 0 si el elemento no se encuentra en la fila y columna especificadas
-    }
-
-    public void imprimirMatrizRandom() {
-        MatrizListas matriz = new MatrizListas();
-
-        // Añadir un valor distinto en cada espacio de la matriz
-        for (int i = 0; i < 4; i++) { // Recorrer las filas
-            for (int j = 0; j < 4; j++) { // Recorrer las columnas
-                int valor = (int) (Math.random() * 100); // Generar un valor aleatorio entre 0 y 9
-                matriz.agregarElemento(i, j, valor); // Agregar el valor a la matriz
-            }
-        }
-
-        // Hacer un print de todos los espacios de la matriz
-        for (int i = 0; i < 4; i++) { // Recorrer las filas
-            for (int j = 0; j < 4; j++) { // Recorrer las columnas
-                Object valor = matriz.obtenerElemento(i, j); // Obtener el valor de la matriz
-                System.out.print(valor + " "); // Imprimir el valor seguido de un espacio
-            }
-            System.out.println(); // Imprimir un salto de línea al final de cada fila
-        }
-
     }
 
 }

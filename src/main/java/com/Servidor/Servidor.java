@@ -15,27 +15,16 @@ import java.net.Socket;
 public class Servidor {
     private final ListaEnlazada clientes = new ListaEnlazada();
     private final Cola colaClientes = new Cola();
+    private final Cola colaSalidaClietnes = new Cola();
     private final ListaEnlazada flujosSalida = new ListaEnlazada();
     private final ListaEnlazada flujosEntrada = new ListaEnlazada();
     private ServerSocket serverSocket;
+    private int turno;
+    MatrizListas matriz = new MatrizListas();
 
     /**
-     * Esta funcion genera la matriz que se utilizara en el archivo JSON
-     */
-    public void GenerarMatriz(){
-        MatrizListas matriz = new MatrizListas();
-
-        for (int i = 0; i < 4; i++) { // Recorrer las filas
-            for (int j = 0; j < 4; j++) { // Recorrer las columnas
-                matriz.agregarElemento(i, j, 0); // Agregar el valor a la matriz
-            }
-        }
-        matriz.imprimirMatrizRandom();
-    }
-
-    /**
-     * Esta funcion permite que el se cree el socket al cual se van a conectar los clientes y genera una cola de clientes
-     * para almacenar cuantos hay y poder cargar las partidas.
+     * Esta función permite que se cree el socket al cual se van a conectar los clientes y genera una cola de clientes
+     * para almacenar cuantos hay y poder cargar las partidas. También inicia los flujos de recibir información y ejecuta la función que inicia la partida.
      * @param puerto es el puerto que se pone a la hora de que se abre la ventana del servidor.
      */
     public void ejecutar(int puerto) {
@@ -51,8 +40,13 @@ public class Servidor {
                     colaClientes.enqueue(clienteSocket);
                     DataOutputStream salida = new DataOutputStream(clienteSocket.getOutputStream());
                     flujosSalida.agregar(salida);
+                    colaSalidaClietnes.enqueue(salida);
                     DataInputStream entrada = new DataInputStream(clienteSocket.getInputStream());
                     flujosEntrada.agregar(entrada);
+
+                    if (turno <= 0) {
+                        empezarJuego();
+                    }
 
                     Thread hiloClientes = new Thread(() -> {
                         try {
@@ -62,10 +56,6 @@ public class Servidor {
                         }
                     });
                     hiloClientes.start();
-
-                    if (colaClientes.tamano() >= 2){
-                        System.out.println("empezar"); //poner funcion empezar
-                    }
                 }
             } catch (IOException e) {
                 System.out.println("Error al iniciar el servidor");
@@ -75,10 +65,33 @@ public class Servidor {
     }
 
     /**
+     * Esta función verifica que haya dos jugadores conectados para empezar el juego y llama a la función que define los turnos.
+     */
+    public void empezarJuego(){
+        if (colaClientes.tamano() >= 2){
+            System.out.println("empezar"); //poner funcion empezar
+            cambiarTurno("turno");
+        } else {
+            System.out.println("Esperando más jugadores");
+        }
+    }
+
+    /**
+     * Esta función envia a todos los clientes un mensaje que les hace cambiar el turno
+     * @param mensajeRecibido mensaje referido a los clientes
+     */
+    public void cambiarTurno(String mensajeRecibido){
+        turno++;
+        //colaClientes.enqueue(clienteSocket);
+        enviarTodos(mensajeRecibido);
+        //enviarEspecifico("turno");
+    }
+
+    /**
      * Esta funcion permite enviar los mensajes entre el servidor y los clientes.
      * @param mensaje es el mensaje que se envia entre el servidor y los clientes.
      */
-    public void enviar(String mensaje) {
+    public void enviarTodos(String mensaje) {
         try {
             Nodo nodoSalida = flujosSalida.getHead();
             while (nodoSalida != null) {
@@ -93,15 +106,35 @@ public class Servidor {
     }
 
     /**
+     * Esta función envia un mensaje a un cliente especifico en el orden de la cola.
+     * @param mensaje mensaje a enviar
+     */
+    public void enviarEspecifico(String mensaje){
+        try {
+            DataOutputStream salida = (DataOutputStream) colaSalidaClietnes.dequeue();
+            salida.writeUTF(mensaje);
+            salida.flush();
+            colaSalidaClietnes.enqueue(salida);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
      * Esta funcion permite recibir los mensajes que envian los clientes.
-     * @param clienteSocket
-     * @param entrada la entrada de la cual esta leyendo el mensaje
+     * @param clienteSocket el socket al cual se está escuchando
+     * @param entrada la entrada de la cual está leyendo el mensaje
      */
     public void recibir(Socket clienteSocket, DataInputStream entrada) {
         try {
             while (true) {
                 String mensajeRecibido = entrada.readUTF();
-                enviar("Cliente: " + mensajeRecibido); // Reenviar mensaje a todos los clientes
+                //enviarTodos(mensajeRecibido); // Reenviar mensaje a todos los clientes
+                colaClientes.dequeue();
+                cambiarTurno(mensajeRecibido);
+                System.out.println("el servidor recibio el turno");
+                colaClientes.enqueue(clienteSocket);
+
             }
         } catch (EOFException e) {
             System.out.println("Conexión cerrada por el cliente");
@@ -111,10 +144,10 @@ public class Servidor {
     }
 
     /**
-     * Esta funcion permite cerrar la conexion entre el servidor y los clientes de manera que no haya errores.
-     * @param clienteSocket
-     * @param salida
-     * @param entrada
+     * Esta función permite cerrar la conexión entre el servidor y los clientes de manera que no haya errores.
+     * @param clienteSocket Socket que se va a cerrar
+     * @param salida Salida del socket a cerrar
+     * @param entrada entrada del socket a cerrar
      */
     public void cerrarConexion(Socket clienteSocket, DataOutputStream salida, DataInputStream entrada) {
         try {
